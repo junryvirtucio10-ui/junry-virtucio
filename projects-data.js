@@ -6,7 +6,9 @@ window.JUNRY_PROJECT_FILTERS = Object.freeze([
   { id: 'construction', label: 'Construction' },
   { id: 'site-services', label: 'Site services' },
   { id: 'interior-design', label: 'Interior design' },
-  { id: 'personal-brand', label: 'Personal brand' }
+  { id: 'personal-brand', label: 'Personal brand' },
+  { id: 'travel', label: 'Travel' },
+  { id: 'venture-groups', label: 'Venture groups' }
 ]);
 
 window.JUNRY_PROJECTS = Object.freeze([
@@ -100,5 +102,31 @@ window.JUNRY_PROJECTS = Object.freeze([
     imageHeight: 8463,
     imageAlt: 'Lucky Portables website homepage featuring portable-restroom rentals, customer types, service benefits, rental options, resources, and a quote form.',
     url: '#'
+  },
+  {
+    id: 'flyover-travel',
+    name: 'FlyOver Travel',
+    sector: 'Travel agency',
+    filters: ['travel'],
+    services: ['Website development', 'Responsive design', 'Service architecture', 'Team profiles', 'Lead generation'],
+    summary: 'A content-rich website for a full-service travel agency, connecting custom trips, cruises, group travel, destination weddings, advisor profiles, educational media, reviews, and trip inquiries in one responsive experience.',
+    image: 'assets/projects/flyovertravel_com_2026-09-04-04-26-40.webp',
+    imageWidth: 1920,
+    imageHeight: 9973,
+    imageAlt: 'FlyOver Travel website homepage featuring travel services, destinations, advisor profiles, videos, articles, client reviews, and trip-planning resources.',
+    url: 'https://flyovertravel.com/'
+  },
+  {
+    id: 'davis-global-ventures-group',
+    name: 'Davis Global Ventures Group',
+    sector: 'Venture group',
+    filters: ['venture-groups'],
+    services: ['Website development', 'Responsive design', 'Brand portfolio', 'Content structure', 'Lead generation'],
+    summary: 'A unified corporate website presenting a purpose-driven portfolio across media, wellness, leadership, and humanitarian work, supported by brand stories, impact metrics, testimonials, and clear contact paths.',
+    image: 'assets/projects/davisglobalgroup_com_2026-09-04-04-27-00.webp',
+    imageWidth: 1920,
+    imageHeight: 6815,
+    imageAlt: 'Davis Global Ventures Group website homepage presenting its portfolio of media, wellness, leadership, health-science, and humanitarian brands.',
+    url: 'https://davisglobalgroup.com/'
   }
 ]);
