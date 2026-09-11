@@ -129,4 +129,18 @@ window.JUNRY_PROJECTS = Object.freeze([
     imageAlt: 'Davis Global Ventures Group website homepage presenting its portfolio of media, wellness, leadership, health-science, and humanitarian brands.',
     url: 'https://davisglobalgroup.com/'
   }
-]);
+].map(project => {
+  const base = `assets/optimized/projects/${project.id}`;
+  const widths = [480, 800, 1200, 1600, 1920];
+  return {
+    ...project,
+    // Retain the original image metadata above for full-resolution use.
+    thumbnail: {
+      src: `${base}-1200.webp`,
+      width: 1920,
+      height: 1440,
+      srcset: widths.map(width => `${base}-${width}.webp ${width}w`).join(', '),
+      avifSrcset: widths.map(width => `${base}-${width}.avif ${width}w`).join(', ')
+    }
+  };
+}));

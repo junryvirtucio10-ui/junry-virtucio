@@ -30,14 +30,26 @@
     media.rel = 'noopener noreferrer';
     media.setAttribute('aria-label', `Visit the ${project.name} website — opens in a new tab`);
 
+    const picture = document.createElement('picture');
+    picture.className = 'responsive-picture';
+    const sizes = '(max-width: 760px) 90vw, (max-width: 1100px) 45vw, (min-width: 1631px) 474px, 29vw';
+    const source = document.createElement('source');
+    source.type = 'image/avif';
+    source.sizes = sizes;
+    source.srcset = project.thumbnail.avifSrcset;
+    picture.append(source);
+
     const image = document.createElement('img');
-    image.src = project.image;
-    image.width = project.imageWidth;
-    image.height = project.imageHeight;
+    image.width = project.thumbnail.width;
+    image.height = project.thumbnail.height;
     image.loading = 'lazy';
     image.decoding = 'async';
     image.alt = project.imageAlt;
-    media.append(image);
+    image.sizes = sizes;
+    image.srcset = project.thumbnail.srcset;
+    image.src = project.thumbnail.src;
+    picture.append(image);
+    media.append(picture);
 
     const visit = document.createElement('span');
     visit.className = 'archive-project-visit mono';

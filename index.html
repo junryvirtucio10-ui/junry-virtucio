@@ -12,7 +12,7 @@
   <meta property="og:description" content="Thoughtful WordPress, e-commerce, SEO, and responsive website experiences built in Cebu, Philippines.">
   <meta property="og:image" content="assets/workspace-hero.jpg">
   <meta property="og:image:width" content="1800">
-  <meta property="og:image:height" content="1200">
+  <meta property="og:image:height" content="2250">
   <meta property="og:image:alt" content="A minimal developer workspace displaying responsive digital interfaces.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Junry Virtucio — Website Developer &amp; Digital Marketer">
@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body data-page="home">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -61,12 +61,18 @@
 
         <div class="hero-visual" data-od-id="hero-visual">
           <div class="workspace-frame" data-parallax="-7">
-            <img src="assets/workspace-hero.jpg" width="1800" height="1200" fetchpriority="high" alt="Minimal workspace with a monitor and tablet displaying digital product interfaces.">
+            <picture class="responsive-picture">
+              <source type="image/avif" srcset="assets/optimized/workspace-hero-480.avif 480w, assets/optimized/workspace-hero-800.avif 800w, assets/optimized/workspace-hero-1200.avif 1200w, assets/optimized/workspace-hero-1600.avif 1600w" sizes="(max-width: 760px) 400px, (max-width: 1100px) 70vw, 500px">
+              <img src="assets/optimized/workspace-hero-800.webp" srcset="assets/optimized/workspace-hero-480.webp 480w, assets/optimized/workspace-hero-800.webp 800w, assets/optimized/workspace-hero-1200.webp 1200w, assets/optimized/workspace-hero-1600.webp 1600w" sizes="(max-width: 760px) 400px, (max-width: 1100px) 70vw, 500px" width="1800" height="2250" fetchpriority="high" decoding="async" alt="Minimal workspace with a monitor and tablet displaying digital product interfaces.">
+            </picture>
           </div>
           <div class="project-window" data-parallax="14">
             <div class="browser-bar" aria-hidden="true"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span></div>
             <div class="hero-project-preview">
-              <img src="assets/projects/idiartlaw_com_2026-08-25-06-21-59.webp" width="1920" height="7592" decoding="async" alt="Preview of the Idiart Law Group website homepage.">
+              <picture class="responsive-picture">
+                <source type="image/avif" srcset="assets/optimized/projects/idiart-law-group-480.avif 480w, assets/optimized/projects/idiart-law-group-800.avif 800w, assets/optimized/projects/idiart-law-group-1200.avif 1200w, assets/optimized/projects/idiart-law-group-1600.avif 1600w, assets/optimized/projects/idiart-law-group-1920.avif 1920w" sizes="(max-width: 760px) 81vw, (max-width: 1100px) 60vw, 30vw">
+                <img src="assets/optimized/projects/idiart-law-group-800.webp" srcset="assets/optimized/projects/idiart-law-group-480.webp 480w, assets/optimized/projects/idiart-law-group-800.webp 800w, assets/optimized/projects/idiart-law-group-1200.webp 1200w, assets/optimized/projects/idiart-law-group-1600.webp 1600w, assets/optimized/projects/idiart-law-group-1920.webp 1920w" sizes="(max-width: 760px) 81vw, (max-width: 1100px) 60vw, 30vw" width="1920" height="1440" decoding="async" alt="Preview of the Idiart Law Group website homepage.">
+              </picture>
               <div class="hero-project-label"><span class="mono">SELECTED WORK / 01</span><strong>Idiart Law Group</strong></div>
             </div>
           </div>
@@ -101,7 +107,10 @@
             <button class="project-action" type="button" data-dialog-project="Idiart Law Group" data-project-url="https://www.idiartlaw.com/" aria-haspopup="dialog">View case study ↗</button>
           </div>
           <button class="project-media" type="button" data-dialog-project="Idiart Law Group" data-project-url="https://www.idiartlaw.com/" aria-haspopup="dialog" aria-label="View the Idiart Law Group case study">
-            <img class="project-screenshot" src="assets/projects/idiartlaw_com_2026-08-25-06-21-59.webp" width="1920" height="7592" loading="lazy" alt="Idiart Law Group website homepage featuring its attorneys, practice areas, testimonials, and consultation information."><span class="view-cursor">VIEW CASE STUDY ↗</span>
+            <picture class="responsive-picture">
+              <source type="image/avif" srcset="assets/optimized/projects/idiart-law-group-480.avif 480w, assets/optimized/projects/idiart-law-group-800.avif 800w, assets/optimized/projects/idiart-law-group-1200.avif 1200w, assets/optimized/projects/idiart-law-group-1600.avif 1600w, assets/optimized/projects/idiart-law-group-1920.avif 1920w" sizes="(max-width: 760px) 90vw, (max-width: 900px) 92vw, (max-width: 1100px) 46vw, (min-width: 1631px) 900px, 56vw">
+              <img class="project-screenshot" src="assets/optimized/projects/idiart-law-group-1200.webp" srcset="assets/optimized/projects/idiart-law-group-480.webp 480w, assets/optimized/projects/idiart-law-group-800.webp 800w, assets/optimized/projects/idiart-law-group-1200.webp 1200w, assets/optimized/projects/idiart-law-group-1600.webp 1600w, assets/optimized/projects/idiart-law-group-1920.webp 1920w" sizes="(max-width: 760px) 90vw, (max-width: 900px) 92vw, (max-width: 1100px) 46vw, (min-width: 1631px) 900px, 56vw" width="1920" height="1440" loading="lazy" decoding="async" alt="Idiart Law Group website homepage featuring its attorneys, practice areas, testimonials, and consultation information.">
+            </picture><span class="view-cursor">VIEW CASE STUDY ↗</span>
           </button>
         </article>
 
@@ -114,7 +123,10 @@
             <button class="project-action" type="button" data-dialog-project="MT Grand Construction" data-project-url="https://mtgrandconstruction.com/" aria-haspopup="dialog">View case study ↗</button>
           </div>
           <button class="project-media" type="button" data-dialog-project="MT Grand Construction" data-project-url="https://mtgrandconstruction.com/" aria-haspopup="dialog" aria-label="View the MT Grand Construction case study">
-            <img class="project-screenshot" src="assets/projects/mtgrandconstruction_com_2026-08-25-06-22-19.webp" width="1920" height="6116" loading="lazy" alt="MT Grand Construction website homepage presenting commercial construction services, projects, and service areas."><span class="view-cursor">VIEW CASE STUDY ↗</span>
+            <picture class="responsive-picture">
+              <source type="image/avif" srcset="assets/optimized/projects/mt-grand-construction-480.avif 480w, assets/optimized/projects/mt-grand-construction-800.avif 800w, assets/optimized/projects/mt-grand-construction-1200.avif 1200w, assets/optimized/projects/mt-grand-construction-1600.avif 1600w, assets/optimized/projects/mt-grand-construction-1920.avif 1920w" sizes="(max-width: 760px) 90vw, (max-width: 900px) 92vw, (max-width: 1100px) 46vw, (min-width: 1631px) 900px, 56vw">
+              <img class="project-screenshot" src="assets/optimized/projects/mt-grand-construction-1200.webp" srcset="assets/optimized/projects/mt-grand-construction-480.webp 480w, assets/optimized/projects/mt-grand-construction-800.webp 800w, assets/optimized/projects/mt-grand-construction-1200.webp 1200w, assets/optimized/projects/mt-grand-construction-1600.webp 1600w, assets/optimized/projects/mt-grand-construction-1920.webp 1920w" sizes="(max-width: 760px) 90vw, (max-width: 900px) 92vw, (max-width: 1100px) 46vw, (min-width: 1631px) 900px, 56vw" width="1920" height="1440" loading="lazy" decoding="async" alt="MT Grand Construction website homepage presenting commercial construction services, projects, and service areas.">
+            </picture><span class="view-cursor">VIEW CASE STUDY ↗</span>
           </button>
         </article>
 
@@ -127,7 +139,10 @@
             <button class="project-action" type="button" data-dialog-project="Clark Gregory Design" data-project-url="https://www.clarkgregorydesign.com/" aria-haspopup="dialog">View case study ↗</button>
           </div>
           <button class="project-media" type="button" data-dialog-project="Clark Gregory Design" data-project-url="https://www.clarkgregorydesign.com/" aria-haspopup="dialog" aria-label="View the Clark Gregory Design case study">
-            <img class="project-screenshot" src="assets/projects/clarkgregorydesign_com_2026-08-25-06-22-46.webp" width="1920" height="8084" loading="lazy" alt="Clark Gregory Design website homepage showing interior-design services and residential project imagery."><span class="view-cursor">VIEW CASE STUDY ↗</span>
+            <picture class="responsive-picture">
+              <source type="image/avif" srcset="assets/optimized/projects/clark-gregory-design-480.avif 480w, assets/optimized/projects/clark-gregory-design-800.avif 800w, assets/optimized/projects/clark-gregory-design-1200.avif 1200w, assets/optimized/projects/clark-gregory-design-1600.avif 1600w, assets/optimized/projects/clark-gregory-design-1920.avif 1920w" sizes="(max-width: 760px) 90vw, (max-width: 900px) 92vw, (max-width: 1100px) 46vw, (min-width: 1631px) 900px, 56vw">
+              <img class="project-screenshot" src="assets/optimized/projects/clark-gregory-design-1200.webp" srcset="assets/optimized/projects/clark-gregory-design-480.webp 480w, assets/optimized/projects/clark-gregory-design-800.webp 800w, assets/optimized/projects/clark-gregory-design-1200.webp 1200w, assets/optimized/projects/clark-gregory-design-1600.webp 1600w, assets/optimized/projects/clark-gregory-design-1920.webp 1920w" sizes="(max-width: 760px) 90vw, (max-width: 900px) 92vw, (max-width: 1100px) 46vw, (min-width: 1631px) 900px, 56vw" width="1920" height="1440" loading="lazy" decoding="async" alt="Clark Gregory Design website homepage showing interior-design services and residential project imagery.">
+            </picture><span class="view-cursor">VIEW CASE STUDY ↗</span>
           </button>
         </article>
 
@@ -140,7 +155,10 @@
             <button class="project-action" type="button" data-dialog-project="Direct Construction" data-project-url="https://www.direct-construction.com/" aria-haspopup="dialog">View case study ↗</button>
           </div>
           <button class="project-media" type="button" data-dialog-project="Direct Construction" data-project-url="https://www.direct-construction.com/" aria-haspopup="dialog" aria-label="View the Direct Construction case study">
-            <img class="project-screenshot" src="assets/projects/directconstructioninc_com_2026-08-25-06-21-39.webp" width="1920" height="5699" loading="lazy" alt="Direct Construction website homepage showing remodeling services, featured projects, process, and testimonials."><span class="view-cursor">VIEW CASE STUDY ↗</span>
+            <picture class="responsive-picture">
+              <source type="image/avif" srcset="assets/optimized/projects/direct-construction-480.avif 480w, assets/optimized/projects/direct-construction-800.avif 800w, assets/optimized/projects/direct-construction-1200.avif 1200w, assets/optimized/projects/direct-construction-1600.avif 1600w, assets/optimized/projects/direct-construction-1920.avif 1920w" sizes="(max-width: 760px) 90vw, (max-width: 900px) 92vw, (max-width: 1100px) 46vw, (min-width: 1631px) 900px, 56vw">
+              <img class="project-screenshot" src="assets/optimized/projects/direct-construction-1200.webp" srcset="assets/optimized/projects/direct-construction-480.webp 480w, assets/optimized/projects/direct-construction-800.webp 800w, assets/optimized/projects/direct-construction-1200.webp 1200w, assets/optimized/projects/direct-construction-1600.webp 1600w, assets/optimized/projects/direct-construction-1920.webp 1920w" sizes="(max-width: 760px) 90vw, (max-width: 900px) 92vw, (max-width: 1100px) 46vw, (min-width: 1631px) 900px, 56vw" width="1920" height="1440" loading="lazy" decoding="async" alt="Direct Construction website homepage showing remodeling services, featured projects, process, and testimonials.">
+            </picture><span class="view-cursor">VIEW CASE STUDY ↗</span>
           </button>
         </article>
 
@@ -153,7 +171,10 @@
             <button class="project-action" type="button" data-dialog-project="Damon Davis" data-project-url="https://damondavis.com/" aria-haspopup="dialog">View case study ↗</button>
           </div>
           <button class="project-media" type="button" data-dialog-project="Damon Davis" data-project-url="https://damondavis.com/" aria-haspopup="dialog" aria-label="View the Damon Davis case study">
-            <img class="project-screenshot" src="assets/projects/damondavis_com_2026-08-25-06-21-48.webp" width="1920" height="2356" loading="lazy" alt="Damon Davis website homepage presenting his businesses, books, music, podcast, and contact information."><span class="view-cursor">VIEW CASE STUDY ↗</span>
+            <picture class="responsive-picture">
+              <source type="image/avif" srcset="assets/optimized/projects/damon-davis-480.avif 480w, assets/optimized/projects/damon-davis-800.avif 800w, assets/optimized/projects/damon-davis-1200.avif 1200w, assets/optimized/projects/damon-davis-1600.avif 1600w, assets/optimized/projects/damon-davis-1920.avif 1920w" sizes="(max-width: 760px) 90vw, (max-width: 900px) 92vw, (max-width: 1100px) 46vw, (min-width: 1631px) 900px, 56vw">
+              <img class="project-screenshot" src="assets/optimized/projects/damon-davis-1200.webp" srcset="assets/optimized/projects/damon-davis-480.webp 480w, assets/optimized/projects/damon-davis-800.webp 800w, assets/optimized/projects/damon-davis-1200.webp 1200w, assets/optimized/projects/damon-davis-1600.webp 1600w, assets/optimized/projects/damon-davis-1920.webp 1920w" sizes="(max-width: 760px) 90vw, (max-width: 900px) 92vw, (max-width: 1100px) 46vw, (min-width: 1631px) 900px, 56vw" width="1920" height="1440" loading="lazy" decoding="async" alt="Damon Davis website homepage presenting his businesses, books, music, podcast, and contact information.">
+            </picture><span class="view-cursor">VIEW CASE STUDY ↗</span>
           </button>
         </article>
 
@@ -172,7 +193,10 @@
       <div class="shell interlude-grid">
         <div class="interlude-copy"><p class="kicker">Built on intent</p><h2 class="section-title" id="interlude-title"><span>Structure</span><span>should feel</span><span>clear.</span><span>Never</span><span>generic.</span></h2></div>
         <div class="interlude-visual">
-          <figure class="interlude-figure"><img src="assets/structure-purpose-visual.jpg" width="1178" height="1335" loading="lazy" alt="Editorial website composition combining wireframe structure, purposeful typography, cobalt accents, and black-and-white architecture."></figure>
+          <figure class="interlude-figure"><picture class="responsive-picture">
+            <source type="image/avif" srcset="assets/optimized/structure-purpose-visual-480.avif 480w, assets/optimized/structure-purpose-visual-800.avif 800w, assets/optimized/structure-purpose-visual-1178.avif 1178w" sizes="(max-width: 760px) 90vw, (max-width: 900px) 680px, 55vw">
+            <img src="assets/optimized/structure-purpose-visual-800.webp" srcset="assets/optimized/structure-purpose-visual-480.webp 480w, assets/optimized/structure-purpose-visual-800.webp 800w, assets/optimized/structure-purpose-visual-1178.webp 1178w" sizes="(max-width: 760px) 90vw, (max-width: 900px) 680px, 55vw" width="1178" height="1335" loading="lazy" decoding="async" alt="Editorial website composition combining wireframe structure, purposeful typography, cobalt accents, and black-and-white architecture.">
+          </picture></figure>
           <div class="interlude-note" aria-hidden="true"><span class="note-dots"></span><span class="note-rule note-rule-long"></span><span class="note-rule"></span><span class="note-rule note-rule-short"></span></div>
         </div>
       </div>
@@ -193,7 +217,10 @@
             <div class="service" data-service="Digital Marketing Support"><button class="service-button" id="service-button-6" type="button" aria-expanded="false" aria-controls="service-panel-6"><span class="mono">06</span><span class="service-name">Digital Marketing Support</span><span class="service-plus" aria-hidden="true">+</span></button><div class="service-panel" id="service-panel-6" role="region" aria-labelledby="service-button-6" aria-hidden="true" inert><div><p>I support landing pages, email marketing, GoHighLevel, forms, automations, analytics, and other systems connected to the website.</p></div></div></div>
           </div>
           <aside class="service-preview" aria-live="polite" data-od-id="services-preview">
-            <img src="assets/services-workspace.jpg" width="1800" height="1200" loading="lazy" alt="Developer workspace with code displayed on a desktop monitor.">
+            <picture class="responsive-picture">
+              <source type="image/avif" srcset="assets/optimized/services-workspace-480.avif 480w, assets/optimized/services-workspace-800.avif 800w, assets/optimized/services-workspace-1200.avif 1200w, assets/optimized/services-workspace-1600.avif 1600w" sizes="(max-width: 760px) 720px, (max-width: 900px) 92vw, 900px">
+              <img src="assets/optimized/services-workspace-800.webp" srcset="assets/optimized/services-workspace-480.webp 480w, assets/optimized/services-workspace-800.webp 800w, assets/optimized/services-workspace-1200.webp 1200w, assets/optimized/services-workspace-1600.webp 1600w" sizes="(max-width: 760px) 720px, (max-width: 900px) 92vw, 900px" width="1800" height="1198" loading="lazy" decoding="async" alt="Developer workspace with code displayed on a desktop monitor.">
+            </picture>
             <div class="preview-overlay"><span class="mono">CURRENT CAPABILITY</span><strong id="preview-title">Strategy + UX</strong><span class="mono">CONTENT → PATHS → ACTION</span></div>
           </aside>
         </div>
@@ -225,7 +252,10 @@
         </header>
         <div class="about-layout">
           <figure class="about-portrait">
-            <img src="assets/junry-portrait.jpg" width="1122" height="1402" loading="lazy" alt="Portrait of Junry Virtucio wearing a black blazer against a dark studio background.">
+            <picture class="responsive-picture">
+              <source type="image/avif" srcset="assets/optimized/junry-portrait-400.avif 400w, assets/optimized/junry-portrait-800.avif 800w, assets/optimized/junry-portrait-1120.avif 1120w" sizes="(max-width: 760px) 90vw, (max-width: 900px) 600px, 45vw">
+              <img src="assets/optimized/junry-portrait-800.webp" srcset="assets/optimized/junry-portrait-400.webp 400w, assets/optimized/junry-portrait-800.webp 800w, assets/optimized/junry-portrait-1120.webp 1120w" sizes="(max-width: 760px) 90vw, (max-width: 900px) 600px, 45vw" width="1122" height="1402" loading="lazy" decoding="async" alt="Portrait of Junry Virtucio wearing a black blazer against a dark studio background.">
+            </picture>
             <figcaption class="portrait-caption"><span class="mono">JUNRY VIRTUCIO / CEBU, PH</span><span class="mono"><i class="status-dot" aria-hidden="true"></i>AVAILABLE FOR SELECTED PROJECTS</span></figcaption>
           </figure>
           <div class="about-details">
@@ -329,8 +359,8 @@
     </div>
   </dialog>
 
-  <script src="site-navigation.js?v=3" defer></script>
-  <script src="projects-data.js?v=4" defer></script>
+  <script src="site-navigation.js?v=4" defer></script>
+  <script src="projects-data.js?v=5" defer></script>
   <script src="script.js?v=6" defer></script>
 </body>
 </html>

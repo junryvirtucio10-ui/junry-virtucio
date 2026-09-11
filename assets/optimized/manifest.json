@@ -1,0 +1,856 @@
+[
+  {
+    "source": "assets/projects/idiartlaw_com_2026-08-25-06-21-59.webp",
+    "sourceSha256": "94c139456ce70da37a1abd79f3c2ceb5f231b23050bf761495aa05667844e77b",
+    "sourceBytes": 962888,
+    "sourceWidth": 1920,
+    "sourceHeight": 7592,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/idiart-law-group-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 22196
+      },
+      {
+        "path": "assets/optimized/projects/idiart-law-group-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 20494
+      },
+      {
+        "path": "assets/optimized/projects/idiart-law-group-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 46436
+      },
+      {
+        "path": "assets/optimized/projects/idiart-law-group-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 42876
+      },
+      {
+        "path": "assets/optimized/projects/idiart-law-group-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 79410
+      },
+      {
+        "path": "assets/optimized/projects/idiart-law-group-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 71241
+      },
+      {
+        "path": "assets/optimized/projects/idiart-law-group-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 111972
+      },
+      {
+        "path": "assets/optimized/projects/idiart-law-group-1600.avif",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 108912
+      },
+      {
+        "path": "assets/optimized/projects/idiart-law-group-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 147496
+      },
+      {
+        "path": "assets/optimized/projects/idiart-law-group-1920.avif",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 129992
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/mtgrandconstruction_com_2026-08-25-06-22-19.webp",
+    "sourceSha256": "0ecad97645c3fa529110b980b0517911e444a72a6c8f2cbe60dfb48bd46c9176",
+    "sourceBytes": 952986,
+    "sourceWidth": 1920,
+    "sourceHeight": 6116,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/mt-grand-construction-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 29914
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-construction-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 25207
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-construction-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 66530
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-construction-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 56802
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-construction-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 122110
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-construction-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 104933
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-construction-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 178030
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-construction-1600.avif",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 158644
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-construction-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 231660
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-construction-1920.avif",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 201210
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/clarkgregorydesign_com_2026-08-25-06-22-46.webp",
+    "sourceSha256": "ebd4e25a3e318e1d17bf47fb1d5a13af287dba014ca90911ca8d79d55b032ecc",
+    "sourceBytes": 1292838,
+    "sourceWidth": 1920,
+    "sourceHeight": 8084,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/clark-gregory-design-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 19198
+      },
+      {
+        "path": "assets/optimized/projects/clark-gregory-design-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 17577
+      },
+      {
+        "path": "assets/optimized/projects/clark-gregory-design-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 40298
+      },
+      {
+        "path": "assets/optimized/projects/clark-gregory-design-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 36356
+      },
+      {
+        "path": "assets/optimized/projects/clark-gregory-design-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 69698
+      },
+      {
+        "path": "assets/optimized/projects/clark-gregory-design-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 63860
+      },
+      {
+        "path": "assets/optimized/projects/clark-gregory-design-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 103958
+      },
+      {
+        "path": "assets/optimized/projects/clark-gregory-design-1600.avif",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 96635
+      },
+      {
+        "path": "assets/optimized/projects/clark-gregory-design-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 138160
+      },
+      {
+        "path": "assets/optimized/projects/clark-gregory-design-1920.avif",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 117818
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/directconstructioninc_com_2026-08-25-06-21-39.webp",
+    "sourceSha256": "117f1562cdbfc7acc344fe9fd0371378c42f3a2772128fa9eebe5b4f24a549f1",
+    "sourceBytes": 1770192,
+    "sourceWidth": 1920,
+    "sourceHeight": 5699,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/direct-construction-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 28604
+      },
+      {
+        "path": "assets/optimized/projects/direct-construction-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 23452
+      },
+      {
+        "path": "assets/optimized/projects/direct-construction-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 68970
+      },
+      {
+        "path": "assets/optimized/projects/direct-construction-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 55630
+      },
+      {
+        "path": "assets/optimized/projects/direct-construction-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 129728
+      },
+      {
+        "path": "assets/optimized/projects/direct-construction-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 108105
+      },
+      {
+        "path": "assets/optimized/projects/direct-construction-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 190616
+      },
+      {
+        "path": "assets/optimized/projects/direct-construction-1600.avif",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 164731
+      },
+      {
+        "path": "assets/optimized/projects/direct-construction-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 243390
+      },
+      {
+        "path": "assets/optimized/projects/direct-construction-1920.avif",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 212580
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/damondavis_com_2026-08-25-06-21-48.webp",
+    "sourceSha256": "83941fe37c1320e20a8fd1a4e0726d47f207ac0bcd924f3b3c3aa983c5843aac",
+    "sourceBytes": 240366,
+    "sourceWidth": 1920,
+    "sourceHeight": 2356,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/damon-davis-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 22388
+      },
+      {
+        "path": "assets/optimized/projects/damon-davis-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 19983
+      },
+      {
+        "path": "assets/optimized/projects/damon-davis-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 44836
+      },
+      {
+        "path": "assets/optimized/projects/damon-davis-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 39621
+      },
+      {
+        "path": "assets/optimized/projects/damon-davis-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 75572
+      },
+      {
+        "path": "assets/optimized/projects/damon-davis-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 68557
+      },
+      {
+        "path": "assets/optimized/projects/damon-davis-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 107286
+      },
+      {
+        "path": "assets/optimized/projects/damon-davis-1600.avif",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 100375
+      },
+      {
+        "path": "assets/optimized/projects/damon-davis-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 138450
+      },
+      {
+        "path": "assets/optimized/projects/damon-davis-1920.avif",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 125895
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/mtgrandhomes_com_2026-08-27-02-24-36.webp",
+    "sourceSha256": "3f86643435f6a47afc1dd785f24a361fd3f6a10def72d19d349f3fd36588c0a0",
+    "sourceBytes": 1100600,
+    "sourceWidth": 1920,
+    "sourceHeight": 6414,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/mt-grand-homes-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 31898
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-homes-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 27084
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-homes-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 74086
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-homes-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 63117
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-homes-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 135220
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-homes-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 113088
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-homes-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 191140
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-homes-1600.avif",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 166722
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-homes-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 238080
+      },
+      {
+        "path": "assets/optimized/projects/mt-grand-homes-1920.avif",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 210004
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/luckyportables_com_2026-08-27-02-29-09.webp",
+    "sourceSha256": "a42d5e258325626cde5f20fc410b5aa2a30224795f199d72b4ed82e1d0fa3632",
+    "sourceBytes": 1318724,
+    "sourceWidth": 1920,
+    "sourceHeight": 8463,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/lucky-portables-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 40204
+      },
+      {
+        "path": "assets/optimized/projects/lucky-portables-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 33924
+      },
+      {
+        "path": "assets/optimized/projects/lucky-portables-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 95874
+      },
+      {
+        "path": "assets/optimized/projects/lucky-portables-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 81136
+      },
+      {
+        "path": "assets/optimized/projects/lucky-portables-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 186160
+      },
+      {
+        "path": "assets/optimized/projects/lucky-portables-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 158035
+      },
+      {
+        "path": "assets/optimized/projects/lucky-portables-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 277228
+      },
+      {
+        "path": "assets/optimized/projects/lucky-portables-1600.avif",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 242728
+      },
+      {
+        "path": "assets/optimized/projects/lucky-portables-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 380428
+      },
+      {
+        "path": "assets/optimized/projects/lucky-portables-1920.avif",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 323944
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/flyovertravel_com_2026-09-04-04-26-40.webp",
+    "sourceSha256": "8f3d01c1cab2e47f1b8e9eb6b7fa065490de856c2a13a2b3b0dd43d30d286daf",
+    "sourceBytes": 2473376,
+    "sourceWidth": 1920,
+    "sourceHeight": 9973,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/flyover-travel-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 41254
+      },
+      {
+        "path": "assets/optimized/projects/flyover-travel-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 33658
+      },
+      {
+        "path": "assets/optimized/projects/flyover-travel-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 106326
+      },
+      {
+        "path": "assets/optimized/projects/flyover-travel-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 86596
+      },
+      {
+        "path": "assets/optimized/projects/flyover-travel-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 222736
+      },
+      {
+        "path": "assets/optimized/projects/flyover-travel-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 184679
+      },
+      {
+        "path": "assets/optimized/projects/flyover-travel-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 371200
+      },
+      {
+        "path": "assets/optimized/projects/flyover-travel-1600.avif",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 306795
+      },
+      {
+        "path": "assets/optimized/projects/flyover-travel-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 533364
+      },
+      {
+        "path": "assets/optimized/projects/flyover-travel-1920.avif",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 429549
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/davisglobalgroup_com_2026-09-04-04-27-00.webp",
+    "sourceSha256": "8b80212a2793cbf548c452fed9152250c92adc60ba512a3438c2bd0e1dc6d2ad",
+    "sourceBytes": 838192,
+    "sourceWidth": 1920,
+    "sourceHeight": 6815,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/davis-global-ventures-group-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 21006
+      },
+      {
+        "path": "assets/optimized/projects/davis-global-ventures-group-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 19825
+      },
+      {
+        "path": "assets/optimized/projects/davis-global-ventures-group-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 37714
+      },
+      {
+        "path": "assets/optimized/projects/davis-global-ventures-group-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 36021
+      },
+      {
+        "path": "assets/optimized/projects/davis-global-ventures-group-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 62280
+      },
+      {
+        "path": "assets/optimized/projects/davis-global-ventures-group-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 57487
+      },
+      {
+        "path": "assets/optimized/projects/davis-global-ventures-group-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 86060
+      },
+      {
+        "path": "assets/optimized/projects/davis-global-ventures-group-1600.avif",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 79583
+      },
+      {
+        "path": "assets/optimized/projects/davis-global-ventures-group-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 103356
+      },
+      {
+        "path": "assets/optimized/projects/davis-global-ventures-group-1920.avif",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 96401
+      }
+    ]
+  },
+  {
+    "source": "assets/workspace-hero.jpg",
+    "sourceSha256": "938aa3fee58161b9c1975159a254b7340b489a550fd5e77a04038a45824df43e",
+    "sourceBytes": 563660,
+    "sourceWidth": 1800,
+    "sourceHeight": 2250,
+    "crop": "none",
+    "outputs": [
+      {
+        "path": "assets/optimized/workspace-hero-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 45320
+      },
+      {
+        "path": "assets/optimized/workspace-hero-480.avif",
+        "width": 480,
+        "height": 600,
+        "bytes": 33326
+      },
+      {
+        "path": "assets/optimized/workspace-hero-800.webp",
+        "width": 800,
+        "height": 1000,
+        "bytes": 94868
+      },
+      {
+        "path": "assets/optimized/workspace-hero-800.avif",
+        "width": 800,
+        "height": 1000,
+        "bytes": 68829
+      },
+      {
+        "path": "assets/optimized/workspace-hero-1200.webp",
+        "width": 1200,
+        "height": 1500,
+        "bytes": 165982
+      },
+      {
+        "path": "assets/optimized/workspace-hero-1200.avif",
+        "width": 1200,
+        "height": 1500,
+        "bytes": 120555
+      },
+      {
+        "path": "assets/optimized/workspace-hero-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 235924
+      },
+      {
+        "path": "assets/optimized/workspace-hero-1600.avif",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 172574
+      }
+    ]
+  },
+  {
+    "source": "assets/services-workspace.jpg",
+    "sourceSha256": "b9ceb3dbc983c1c2af6ef054682f28490d88d34d4d344b68b8fdced4de66ddb5",
+    "sourceBytes": 260351,
+    "sourceWidth": 1800,
+    "sourceHeight": 1198,
+    "crop": "none",
+    "outputs": [
+      {
+        "path": "assets/optimized/services-workspace-480.webp",
+        "width": 480,
+        "height": 319,
+        "bytes": 17698
+      },
+      {
+        "path": "assets/optimized/services-workspace-480.avif",
+        "width": 480,
+        "height": 319,
+        "bytes": 15238
+      },
+      {
+        "path": "assets/optimized/services-workspace-800.webp",
+        "width": 800,
+        "height": 532,
+        "bytes": 37110
+      },
+      {
+        "path": "assets/optimized/services-workspace-800.avif",
+        "width": 800,
+        "height": 532,
+        "bytes": 28552
+      },
+      {
+        "path": "assets/optimized/services-workspace-1200.webp",
+        "width": 1200,
+        "height": 799,
+        "bytes": 64222
+      },
+      {
+        "path": "assets/optimized/services-workspace-1200.avif",
+        "width": 1200,
+        "height": 799,
+        "bytes": 48384
+      },
+      {
+        "path": "assets/optimized/services-workspace-1600.webp",
+        "width": 1600,
+        "height": 1065,
+        "bytes": 94752
+      },
+      {
+        "path": "assets/optimized/services-workspace-1600.avif",
+        "width": 1600,
+        "height": 1065,
+        "bytes": 70275
+      }
+    ]
+  },
+  {
+    "source": "assets/structure-purpose-visual.jpg",
+    "sourceSha256": "6ff8cf661cb86323eef872f61a5791568d42f861eb226b0fe9689da79cdba9e4",
+    "sourceBytes": 224118,
+    "sourceWidth": 1178,
+    "sourceHeight": 1335,
+    "crop": "none",
+    "outputs": [
+      {
+        "path": "assets/optimized/structure-purpose-visual-480.webp",
+        "width": 480,
+        "height": 544,
+        "bytes": 13210
+      },
+      {
+        "path": "assets/optimized/structure-purpose-visual-480.avif",
+        "width": 480,
+        "height": 544,
+        "bytes": 10448
+      },
+      {
+        "path": "assets/optimized/structure-purpose-visual-800.webp",
+        "width": 800,
+        "height": 907,
+        "bytes": 30242
+      },
+      {
+        "path": "assets/optimized/structure-purpose-visual-800.avif",
+        "width": 800,
+        "height": 907,
+        "bytes": 22710
+      },
+      {
+        "path": "assets/optimized/structure-purpose-visual-1178.webp",
+        "width": 1178,
+        "height": 1335,
+        "bytes": 54648
+      },
+      {
+        "path": "assets/optimized/structure-purpose-visual-1178.avif",
+        "width": 1178,
+        "height": 1335,
+        "bytes": 40076
+      }
+    ]
+  },
+  {
+    "source": "assets/junry-portrait.jpg",
+    "sourceSha256": "fdfb29194a15ed61cc8df74656d5fea323337d6b43cc79ed525c9519a6db7c74",
+    "sourceBytes": 109645,
+    "sourceWidth": 1122,
+    "sourceHeight": 1402,
+    "crop": "none",
+    "outputs": [
+      {
+        "path": "assets/optimized/junry-portrait-400.webp",
+        "width": 400,
+        "height": 500,
+        "bytes": 7928
+      },
+      {
+        "path": "assets/optimized/junry-portrait-400.avif",
+        "width": 400,
+        "height": 500,
+        "bytes": 6932
+      },
+      {
+        "path": "assets/optimized/junry-portrait-800.webp",
+        "width": 800,
+        "height": 1000,
+        "bytes": 21990
+      },
+      {
+        "path": "assets/optimized/junry-portrait-800.avif",
+        "width": 800,
+        "height": 1000,
+        "bytes": 19559
+      },
+      {
+        "path": "assets/optimized/junry-portrait-1120.webp",
+        "width": 1120,
+        "height": 1400,
+        "bytes": 35860
+      },
+      {
+        "path": "assets/optimized/junry-portrait-1120.avif",
+        "width": 1120,
+        "height": 1400,
+        "bytes": 32385
+      }
+    ]
+  },
+  {
+    "source": "assets/jv-white-logo.png",
+    "sourceSha256": "e114bb273c52d244cbf154ddf717679228b7f3fa25d315d9bdd25805236bd7a0",
+    "sourceBytes": 1090585,
+    "sourceWidth": 1536,
+    "sourceHeight": 1024,
+    "crop": "none",
+    "outputs": [
+      {
+        "path": "assets/optimized/jv-white-logo-198.webp",
+        "width": 198,
+        "height": 132,
+        "bytes": 4620
+      }
+    ]
+  }
+]

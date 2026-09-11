@@ -23,7 +23,7 @@
   root.innerHTML = `
     <header class="site-nav" id="site-nav" data-od-id="floating-navigation">
       <a class="brand" href="${onHomepage ? '#top' : 'index.html'}" aria-label="Junry Virtucio, return to homepage" data-od-id="brand-mark">
-        <img class="brand-logo" src="assets/jv-white-logo.png" width="1536" height="1024" alt=""><span class="brand-note">WEB DESIGN +<br>DEVELOPMENT</span>
+        <img class="brand-logo" src="assets/optimized/jv-white-logo-198.webp" width="198" height="132" decoding="async" alt=""><span class="brand-note">WEB DESIGN +<br>DEVELOPMENT</span>
       </a>
       <nav class="desktop-links" aria-label="Primary navigation">${desktopLinks}</nav>
       <a class="nav-action" href="${sectionHref('contact')}" data-od-id="nav-start-project">Start a project ↗</a>
