@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore website projects designed and developed by Junry Virtucio across legal services, construction, travel, interior design, venture groups, site services, and personal brands.">
+  <meta name="description" content="Explore website projects designed and developed by Junry Virtucio across healthcare, e-commerce, construction, workforce, travel, professional services, and more.">
   <meta name="theme-color" content="#faf7f0">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_PH">
@@ -13,14 +13,14 @@
   <meta property="og:image" content="assets/projects/idiartlaw_com_2026-08-25-06-21-59.webp">
   <title>All Projects — Junry Virtucio</title>
   <link rel="canonical" href="projects.html">
-  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=2">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=2">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.png?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png?v=2">
   <link rel="manifest" href="site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=8">
-  <link rel="stylesheet" href="projects.css?v=5">
+  <link rel="stylesheet" href="projects.css?v=9">
 </head>
 <body class="project-archive-page" data-page="projects">
   <a class="skip-link" href="#main">Skip to project archive</a>
@@ -47,13 +47,17 @@
           <p>Filter the archive by type of business. New work can be added without changing the page layout.</p>
         </header>
 
-        <div class="archive-controls">
+        <div class="archive-controls" aria-label="Project archive filters">
+          <div class="archive-controls-head">
+            <p class="archive-filter-label mono"><span aria-hidden="true"></span>Filter by industry</p>
+            <p class="project-count mono" id="project-count" aria-live="polite" aria-atomic="true">Loading projects…</p>
+          </div>
           <div class="project-filters" id="project-filters" role="group" aria-label="Filter projects"></div>
           <div class="mobile-project-filter">
-            <label class="mono" for="project-filter-select">Business type</label>
-            <select id="project-filter-select" aria-controls="project-grid" aria-label="Filter projects by business type"></select>
+            <label class="mono" for="project-filter-select">Industry</label>
+            <!-- Native select is intentional here; compact viewports use the platform-owned popup and keyboard model. -->
+            <select id="project-filter-select" aria-controls="project-grid" aria-label="Filter projects by industry"></select>
           </div>
-          <p class="project-count mono" id="project-count" aria-live="polite">Loading projects…</p>
         </div>
 
         <div class="archive-grid" id="project-grid"></div>
@@ -82,7 +86,7 @@
   </footer>
 
   <script src="site-navigation.js?v=4" defer></script>
-  <script src="projects-data.js?v=5" defer></script>
-  <script src="projects-page.js?v=6" defer></script>
+  <script src="projects-data.js?v=7" defer></script>
+  <script src="projects-page.js?v=9" defer></script>
 </body>
 </html>

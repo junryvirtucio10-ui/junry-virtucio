@@ -1,4 +1,4 @@
-"""Build responsive images from the untouched originals in assets/.
+"""Build responsive images from the untouched originals in assets/images/.
 
 Install: python -m pip install -r scripts/image-requirements.txt
 Run:     python scripts/optimize_images.py
@@ -13,6 +13,7 @@ from PIL import Image, ImageOps, features
 
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / 'assets' / 'optimized'
+IMAGE_SOURCES = ROOT / 'assets' / 'images'
 PROJECT_WIDTHS = (480, 800, 1200, 1600, 1920)
 PHOTOS = {
     'workspace-hero': (480, 800, 1200, 1600),
@@ -30,14 +31,24 @@ def variants(source, name, widths, crop=False):
     with Image.open(source) as original:
         image = ImageOps.exif_transpose(original).convert('RGB')
         original_size = image.size
+        crop_description = 'none'
         if crop:
-            # The site's object-fit: cover / object-position: top shows this
-            # exact region. The narrower mobile archive/hero crops it further.
-            image = image.crop((0, 0, image.width, image.width * 3 // 4))
+            target_height = image.width * 3 // 4
+            if image.height >= target_height:
+                # Tall captures show their top 4:3 region in the archive.
+                image = image.crop((0, 0, image.width, target_height))
+                crop_description = 'top 4:3'
+            else:
+                # Wide captures crop equally from both sides without padding.
+                target_width = image.height * 4 // 3
+                left = (image.width - target_width) // 2
+                image = image.crop((left, 0, left + target_width, image.height))
+                crop_description = 'center 4:3'
+        eligible_widths = tuple(width for width in widths if width <= image.width)
+        if not eligible_widths:
+            raise ValueError(f'No output width fits without upscaling: {source}')
         outputs = []
-        for width in widths:
-            if width > image.width:
-                raise ValueError(f'Upscaling is not allowed: {source} -> {width}')
+        for width in eligible_widths:
             height = round(width * image.height / image.width)
             resized = image.resize((width, height), Image.Resampling.LANCZOS)
             for extension in ('webp', 'avif'):
@@ -57,7 +68,7 @@ def variants(source, name, widths, crop=False):
     record = {'source': source.relative_to(ROOT).as_posix(),
               'sourceSha256': digest(source), 'sourceBytes': source.stat().st_size,
               'sourceWidth': original_size[0], 'sourceHeight': original_size[1],
-              'crop': 'top 4:3' if crop else 'none', 'outputs': outputs}
+              'crop': crop_description, 'outputs': outputs}
     print(f'{name}: {record["sourceBytes"]:,} bytes -> '
           f'{outputs[-1]["bytes"]:,} bytes (largest AVIF)', flush=True)
     return record
@@ -73,9 +84,9 @@ def main():
     records = [variants(ROOT / source, f'projects/{name}', PROJECT_WIDTHS, crop=True)
                for name, source in projects]
     for name, widths in PHOTOS.items():
-        records.append(variants(ROOT / 'assets' / f'{name}.jpg', name, widths))
+        records.append(variants(IMAGE_SOURCES / f'{name}.jpg', name, widths))
 
-    source = ROOT / 'assets' / 'jv-white-logo.png'
+    source = IMAGE_SOURCES / 'jv-white-logo.png'
     target = DEST / 'jv-white-logo-198.webp'
     with Image.open(source) as original:
         logo = ImageOps.exif_transpose(original).convert('RGBA')

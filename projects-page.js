@@ -23,12 +23,17 @@
     article.className = 'archive-project';
     article.dataset.filters = project.filters.join(' ');
 
-    const media = document.createElement('a');
+    const hasLiveUrl = Boolean(project.url && project.url !== '#');
+    const media = document.createElement(hasLiveUrl ? 'a' : 'div');
     media.className = 'archive-project-media';
-    media.href = project.url;
-    media.target = '_blank';
-    media.rel = 'noopener noreferrer';
-    media.setAttribute('aria-label', `Visit the ${project.name} website — opens in a new tab`);
+    if (hasLiveUrl) {
+      media.href = project.url;
+      media.target = '_blank';
+      media.rel = 'noopener noreferrer';
+      media.setAttribute('aria-label', `Visit the ${project.name} website — opens in a new tab`);
+    } else {
+      media.classList.add('is-static');
+    }
 
     const picture = document.createElement('picture');
     picture.className = 'responsive-picture';
@@ -53,7 +58,7 @@
 
     const visit = document.createElement('span');
     visit.className = 'archive-project-visit mono';
-    visit.textContent = 'VISIT WEBSITE ↗';
+    visit.textContent = hasLiveUrl ? 'VISIT WEBSITE ↗' : 'PROJECT CAPTURE';
     media.append(visit);
 
     const body = document.createElement('div');
@@ -61,15 +66,23 @@
 
     const eyebrow = document.createElement('div');
     eyebrow.className = 'archive-project-eyebrow mono';
-    eyebrow.innerHTML = `<span>PROJECT ${pad(index + 1)}</span><span>${project.sector}</span>`;
+    const projectNumber = document.createElement('span');
+    projectNumber.textContent = `PROJECT ${pad(index + 1)}`;
+    const projectSector = document.createElement('span');
+    projectSector.textContent = project.sector;
+    eyebrow.append(projectNumber, projectSector);
 
     const title = document.createElement('h3');
-    const titleLink = document.createElement('a');
-    titleLink.href = project.url;
-    titleLink.target = '_blank';
-    titleLink.rel = 'noopener noreferrer';
-    titleLink.textContent = project.name;
-    title.append(titleLink);
+    if (hasLiveUrl) {
+      const titleLink = document.createElement('a');
+      titleLink.href = project.url;
+      titleLink.target = '_blank';
+      titleLink.rel = 'noopener noreferrer';
+      titleLink.textContent = project.name;
+      title.append(titleLink);
+    } else {
+      title.textContent = project.name;
+    }
 
     const summary = document.createElement('p');
     summary.className = 'archive-project-summary';
@@ -123,22 +136,20 @@
 
   const validFilters = configuredFilters.filter(filter => filter.id === 'all' || projects.some(project => project.filters.includes(filter.id)));
   const buttons = validFilters.map(filter => {
-    const visibleCount = filter.id === 'all' ? projects.length : projects.filter(project => project.filters.includes(filter.id)).length;
     const button = document.createElement('button');
     button.className = 'filter-button mono';
     button.type = 'button';
     button.dataset.filter = filter.id;
     button.setAttribute('aria-controls', 'project-grid');
     button.setAttribute('aria-pressed', 'false');
-    button.innerHTML = `<span>${filter.label}</span><span>${pad(visibleCount)}</span>`;
+    button.textContent = filter.label;
     filterBar.append(button);
     return button;
   });
   validFilters.forEach(filter => {
-    const visibleCount = filter.id === 'all' ? projects.length : projects.filter(project => project.filters.includes(filter.id)).length;
     const option = document.createElement('option');
     option.value = filter.id;
-    option.textContent = `${filter.label} (${visibleCount})`;
+    option.textContent = filter.label;
     mobileFilter.append(option);
   });
 
@@ -154,8 +165,11 @@
     mobileFilter.value = selected;
     const label = validFilters.find(item => item.id === selected)?.label || 'All';
     count.textContent = selected === 'all'
-      ? `SHOWING ${pad(visible)} / ${pad(projects.length)} WEBSITES`
-      : `SHOWING ${pad(visible)} / ${pad(projects.length)} · ${label.toUpperCase()}`;
+      ? 'projects · all industries'
+      : `projects · ${label}`;
+    count.setAttribute('aria-label', selected === 'all'
+      ? 'Showing projects from all industries'
+      : `Showing projects in ${label}`);
     empty.hidden = visible !== 0;
 
     if (updateUrl && !reducedMotion.matches && typeof grid.animate === 'function') {

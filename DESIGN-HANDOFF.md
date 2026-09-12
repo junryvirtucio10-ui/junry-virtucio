@@ -70,20 +70,43 @@ For responsive web exports, treat these as a modern breakpoint system for one ad
 
 ## Scripts/components
 - `script.js`
+- `site-navigation.js`
+- `projects-data.js`
+- `projects-page.js`
 
 ## Assets and supporting files
-- `assets/about-workspace.jpg`
-- `assets/architecture-interlude.jpg`
-- `assets/jv-white-logo.png`
-- `assets/junry-portrait.jpg`
+- `assets/images/about-workspace.jpg`
+- `assets/images/architecture-interlude.jpg`
+- `assets/images/jv-white-logo.png`
+- `assets/images/junry-portrait.jpg`
+- `assets/projects/alliance-care-medical.webp`
+- `assets/projects/amrocor.webp`
+- `assets/projects/assistmynt.webp`
+- `assets/projects/buddy-bright.webp`
 - `assets/projects/clarkgregorydesign_com_2026-08-25-06-22-46.webp`
+- `assets/projects/classe-credit-consulting.webp`
 - `assets/projects/damondavis_com_2026-08-25-06-21-48.webp`
+- `assets/projects/davisglobalgroup_com_2026-09-04-04-27-00.webp`
 - `assets/projects/directconstructioninc_com_2026-08-25-06-21-39.webp`
+- `assets/projects/flyovertravel_com_2026-09-04-04-26-40.webp`
+- `assets/projects/global-workforce.webp`
 - `assets/projects/idiartlaw_com_2026-08-25-06-21-59.webp`
+- `assets/projects/innovamed-industries.webp`
+- `assets/projects/luckyportables_com_2026-08-27-02-29-09.webp`
 - `assets/projects/mtgrandconstruction_com_2026-08-25-06-22-19.webp`
-- `assets/services-workspace.jpg`
-- `assets/structure-purpose-visual.jpg`
-- `assets/workspace-hero.jpg`
+- `assets/projects/mtgrandhomes_com_2026-08-27-02-24-36.webp`
+- `assets/projects/newsom-eye.webp`
+- `assets/projects/orbit-building-remodeling.webp`
+- `assets/projects/oyins-international.webp`
+- `assets/projects/perfect-foto.webp`
+- `assets/projects/premier-island-jobs.webp`
+- `assets/projects/sail-with-seth.webp`
+- `assets/projects/thriving-gutters.webp`
+- `assets/projects/tradie.png`
+- `assets/projects/zoe-wellness.webp`
+- `assets/images/services-workspace.jpg`
+- `assets/images/structure-purpose-visual.jpg`
+- `assets/images/workspace-hero.jpg`
 - `brand-spec.md`
 
 ## Coding checklist for AI tools

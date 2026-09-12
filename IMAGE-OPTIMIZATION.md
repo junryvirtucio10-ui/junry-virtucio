@@ -1,8 +1,9 @@
 # Image optimization
 
 The homepage and project archive use responsive AVIF images with WebP fallbacks.
-All original files remain at their existing paths in `assets/`; the pages display
-the smaller derivatives in `assets/optimized/`.
+Original site media is organized in `assets/images/`, while full project captures
+live in `assets/projects/`. Pages display smaller derivatives from
+`assets/optimized/`.
 
 ## Measured image downloads
 
@@ -10,6 +11,10 @@ Measured in local Microsoft Edge with a fresh browser context. Desktop was
 1440 x 900 at 1x pixel density; mobile was 390 x 844 at 2x. These are downloaded
 image bytes, not total page size or a prediction of load time on a live network.
 Full-page measurements include scrolling through all images.
+
+The project-archive measurements below document the original nine-project
+benchmark; the archive has since expanded and should be remeasured before using
+those two rows as a current transfer-size budget.
 
 | Measurement | Before | After | Reduction |
 | --- | ---: | ---: | ---: |
@@ -27,7 +32,8 @@ AVIF, caching, and the browser's lazy-loading distance.
 - Project previews crop the top 4:3 region of the original screenshot, matching
   the existing CSS framing. Mobile archive cards and the hero retain their own
   existing crop via `object-fit: cover` and `object-position: top center`.
-- Project thumbnails have 480, 800, 1200, 1600, and 1920 px width variants.
+- Project thumbnails use 480, 800, and 1200 px variants. Sources at least 1600
+  or 1920 px wide also receive those larger variants; the optimizer never upscales.
 - Photos retain their original compositions and have multiple width variants.
   Services image sizes account for the extra scaling caused by its tall frame.
 - The 66 x 44 px header logo uses a 198 x 132 lossless WebP for up to 3x density:
@@ -67,8 +73,8 @@ Open `http://localhost:5173`. No npm build or dev server is required.
 
 ## Verification
 
-- All 119 generated images decoded successfully with the expected dimensions.
-- All 14 optimized originals matched their committed Git versions byte for byte.
+- All 217 generated images decoded successfully with the expected dimensions.
+- All 30 source images were processed without modifying the originals.
 - Asset references and responsive width descriptors were verified.
 - Homepage and archive checked at 1440, 820, and 390 px, including high-density
   tablet/mobile rendering, image loading, project filters, mobile navigation,

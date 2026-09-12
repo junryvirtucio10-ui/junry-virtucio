@@ -630,7 +630,755 @@
     ]
   },
   {
-    "source": "assets/workspace-hero.jpg",
+    "source": "assets/projects/tradie.png",
+    "sourceSha256": "6640d27251fe860af755d3b9c10af0fcbdf2f890ffb6afd7037ea3824362d338",
+    "sourceBytes": 4079282,
+    "sourceWidth": 1920,
+    "sourceHeight": 4908,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/tradie-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 16454
+      },
+      {
+        "path": "assets/optimized/projects/tradie-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 13120
+      },
+      {
+        "path": "assets/optimized/projects/tradie-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 31948
+      },
+      {
+        "path": "assets/optimized/projects/tradie-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 26542
+      },
+      {
+        "path": "assets/optimized/projects/tradie-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 54756
+      },
+      {
+        "path": "assets/optimized/projects/tradie-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 44783
+      },
+      {
+        "path": "assets/optimized/projects/tradie-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 79446
+      },
+      {
+        "path": "assets/optimized/projects/tradie-1600.avif",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 64690
+      },
+      {
+        "path": "assets/optimized/projects/tradie-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 100234
+      },
+      {
+        "path": "assets/optimized/projects/tradie-1920.avif",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 79820
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/newsom-eye.webp",
+    "sourceSha256": "075c65389f97d3da1cb9e64897145abd2a11446e27ff237325ba9b1f2584d4a2",
+    "sourceBytes": 378830,
+    "sourceWidth": 1440,
+    "sourceHeight": 6769,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/newsom-eye-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 20046
+      },
+      {
+        "path": "assets/optimized/projects/newsom-eye-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 18115
+      },
+      {
+        "path": "assets/optimized/projects/newsom-eye-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 41524
+      },
+      {
+        "path": "assets/optimized/projects/newsom-eye-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 36947
+      },
+      {
+        "path": "assets/optimized/projects/newsom-eye-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 70872
+      },
+      {
+        "path": "assets/optimized/projects/newsom-eye-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 65717
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/assistmynt.webp",
+    "sourceSha256": "420f8e23ec1119f25953a23c382f272f534abbbcd398359898f83c9450683a17",
+    "sourceBytes": 143078,
+    "sourceWidth": 1440,
+    "sourceHeight": 3290,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/assistmynt-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 12974
+      },
+      {
+        "path": "assets/optimized/projects/assistmynt-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 12507
+      },
+      {
+        "path": "assets/optimized/projects/assistmynt-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 29050
+      },
+      {
+        "path": "assets/optimized/projects/assistmynt-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 26971
+      },
+      {
+        "path": "assets/optimized/projects/assistmynt-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 53074
+      },
+      {
+        "path": "assets/optimized/projects/assistmynt-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 49540
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/alliance-care-medical.webp",
+    "sourceSha256": "ad725b3e85c03931c5c80e9a7662dfac2c8086696839501c61ef4da306ce683a",
+    "sourceBytes": 336412,
+    "sourceWidth": 1440,
+    "sourceHeight": 4368,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/alliance-care-medical-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 24268
+      },
+      {
+        "path": "assets/optimized/projects/alliance-care-medical-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 22213
+      },
+      {
+        "path": "assets/optimized/projects/alliance-care-medical-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 48548
+      },
+      {
+        "path": "assets/optimized/projects/alliance-care-medical-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 44212
+      },
+      {
+        "path": "assets/optimized/projects/alliance-care-medical-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 76834
+      },
+      {
+        "path": "assets/optimized/projects/alliance-care-medical-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 73354
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/classe-credit-consulting.webp",
+    "sourceSha256": "0a5324b293f9ecccdc0a955239e1bc20c26fd4fbafa4bce7829c9ec6ae711c3e",
+    "sourceBytes": 420512,
+    "sourceWidth": 1440,
+    "sourceHeight": 4920,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/classe-credit-consulting-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 24120
+      },
+      {
+        "path": "assets/optimized/projects/classe-credit-consulting-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 19672
+      },
+      {
+        "path": "assets/optimized/projects/classe-credit-consulting-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 49026
+      },
+      {
+        "path": "assets/optimized/projects/classe-credit-consulting-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 42054
+      },
+      {
+        "path": "assets/optimized/projects/classe-credit-consulting-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 82134
+      },
+      {
+        "path": "assets/optimized/projects/classe-credit-consulting-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 72110
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/orbit-building-remodeling.webp",
+    "sourceSha256": "a6f1d1e0e25fdee3bdca15723d923492054b209785b355816400a22a2f7f8d33",
+    "sourceBytes": 303768,
+    "sourceWidth": 1440,
+    "sourceHeight": 4690,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/orbit-building-remodeling-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 16260
+      },
+      {
+        "path": "assets/optimized/projects/orbit-building-remodeling-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 14075
+      },
+      {
+        "path": "assets/optimized/projects/orbit-building-remodeling-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 34900
+      },
+      {
+        "path": "assets/optimized/projects/orbit-building-remodeling-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 30630
+      },
+      {
+        "path": "assets/optimized/projects/orbit-building-remodeling-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 60792
+      },
+      {
+        "path": "assets/optimized/projects/orbit-building-remodeling-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 56213
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/oyins-international.webp",
+    "sourceSha256": "355c2b9b3b0c49818e8977fc64af9244af49d2b2abd0d09bace2f1da02375235",
+    "sourceBytes": 499128,
+    "sourceWidth": 1440,
+    "sourceHeight": 6544,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/oyins-international-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 25182
+      },
+      {
+        "path": "assets/optimized/projects/oyins-international-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 22977
+      },
+      {
+        "path": "assets/optimized/projects/oyins-international-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 52570
+      },
+      {
+        "path": "assets/optimized/projects/oyins-international-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 47093
+      },
+      {
+        "path": "assets/optimized/projects/oyins-international-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 89954
+      },
+      {
+        "path": "assets/optimized/projects/oyins-international-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 81039
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/thriving-gutters.webp",
+    "sourceSha256": "a1004df97afd3f6cdb6726b295a062d71ae19bbfc73cacec5b0576bbb1d67f87",
+    "sourceBytes": 18032,
+    "sourceWidth": 1440,
+    "sourceHeight": 727,
+    "crop": "center 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/thriving-gutters-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 6878
+      },
+      {
+        "path": "assets/optimized/projects/thriving-gutters-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 7085
+      },
+      {
+        "path": "assets/optimized/projects/thriving-gutters-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 13968
+      },
+      {
+        "path": "assets/optimized/projects/thriving-gutters-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 14641
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/sail-with-seth.webp",
+    "sourceSha256": "d2e24331622d4b553211697ca291fe25e3071632b6ff9f96905175fc85901f3d",
+    "sourceBytes": 245488,
+    "sourceWidth": 1440,
+    "sourceHeight": 2382,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/sail-with-seth-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 22708
+      },
+      {
+        "path": "assets/optimized/projects/sail-with-seth-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 19369
+      },
+      {
+        "path": "assets/optimized/projects/sail-with-seth-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 53358
+      },
+      {
+        "path": "assets/optimized/projects/sail-with-seth-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 45112
+      },
+      {
+        "path": "assets/optimized/projects/sail-with-seth-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 96318
+      },
+      {
+        "path": "assets/optimized/projects/sail-with-seth-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 83554
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/buddy-bright.webp",
+    "sourceSha256": "68f56c454ca0d9ae2d0a302352402399b7244d198915131d8f3c536f4a972ddd",
+    "sourceBytes": 390216,
+    "sourceWidth": 1440,
+    "sourceHeight": 7724,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/buddy-bright-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 17262
+      },
+      {
+        "path": "assets/optimized/projects/buddy-bright-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 15460
+      },
+      {
+        "path": "assets/optimized/projects/buddy-bright-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 33044
+      },
+      {
+        "path": "assets/optimized/projects/buddy-bright-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 30576
+      },
+      {
+        "path": "assets/optimized/projects/buddy-bright-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 53412
+      },
+      {
+        "path": "assets/optimized/projects/buddy-bright-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 50628
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/amrocor.webp",
+    "sourceSha256": "78b4a9cb46044e37ae3b61f0265262cfe9f2a216a35d8872de4df83e526511c1",
+    "sourceBytes": 295346,
+    "sourceWidth": 1440,
+    "sourceHeight": 5369,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/amrocor-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 20214
+      },
+      {
+        "path": "assets/optimized/projects/amrocor-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 17753
+      },
+      {
+        "path": "assets/optimized/projects/amrocor-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 43612
+      },
+      {
+        "path": "assets/optimized/projects/amrocor-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 38397
+      },
+      {
+        "path": "assets/optimized/projects/amrocor-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 74118
+      },
+      {
+        "path": "assets/optimized/projects/amrocor-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 66976
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/perfect-foto.webp",
+    "sourceSha256": "3e59b513a32728cb7658076c7742a8dd4dec5bf69db48eb704dc2eda49fc19e8",
+    "sourceBytes": 551654,
+    "sourceWidth": 1440,
+    "sourceHeight": 5461,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/perfect-foto-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 43178
+      },
+      {
+        "path": "assets/optimized/projects/perfect-foto-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 37097
+      },
+      {
+        "path": "assets/optimized/projects/perfect-foto-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 93954
+      },
+      {
+        "path": "assets/optimized/projects/perfect-foto-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 80374
+      },
+      {
+        "path": "assets/optimized/projects/perfect-foto-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 171330
+      },
+      {
+        "path": "assets/optimized/projects/perfect-foto-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 144458
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/premier-island-jobs.webp",
+    "sourceSha256": "b2250aa0f67d23ff9d028e2fcc77bd16e9110d6db009c6b6f97a88c276a19006",
+    "sourceBytes": 149514,
+    "sourceWidth": 1440,
+    "sourceHeight": 2554,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/premier-island-jobs-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 17938
+      },
+      {
+        "path": "assets/optimized/projects/premier-island-jobs-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 15889
+      },
+      {
+        "path": "assets/optimized/projects/premier-island-jobs-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 36016
+      },
+      {
+        "path": "assets/optimized/projects/premier-island-jobs-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 34005
+      },
+      {
+        "path": "assets/optimized/projects/premier-island-jobs-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 61092
+      },
+      {
+        "path": "assets/optimized/projects/premier-island-jobs-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 58431
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/global-workforce.webp",
+    "sourceSha256": "aae2c95023c11d4d00a4e0a2b07b4e401c8482518b08e96f3e8b73135bf09602",
+    "sourceBytes": 114110,
+    "sourceWidth": 1440,
+    "sourceHeight": 2838,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/global-workforce-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 8956
+      },
+      {
+        "path": "assets/optimized/projects/global-workforce-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 8090
+      },
+      {
+        "path": "assets/optimized/projects/global-workforce-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 18738
+      },
+      {
+        "path": "assets/optimized/projects/global-workforce-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 17854
+      },
+      {
+        "path": "assets/optimized/projects/global-workforce-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 31066
+      },
+      {
+        "path": "assets/optimized/projects/global-workforce-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 28980
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/innovamed-industries.webp",
+    "sourceSha256": "725a3b7315db742f420a91b00c6939a78b3c6d7b62bde64289263c2428f60ae3",
+    "sourceBytes": 329464,
+    "sourceWidth": 1440,
+    "sourceHeight": 5260,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/innovamed-industries-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 20238
+      },
+      {
+        "path": "assets/optimized/projects/innovamed-industries-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 18250
+      },
+      {
+        "path": "assets/optimized/projects/innovamed-industries-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 39490
+      },
+      {
+        "path": "assets/optimized/projects/innovamed-industries-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 37548
+      },
+      {
+        "path": "assets/optimized/projects/innovamed-industries-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 67470
+      },
+      {
+        "path": "assets/optimized/projects/innovamed-industries-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 63844
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/zoe-wellness.webp",
+    "sourceSha256": "c468ba7f212525e97a7f7589d08370a6d7671f6e9493468dcb72d3aea09d2577",
+    "sourceBytes": 192874,
+    "sourceWidth": 1440,
+    "sourceHeight": 3191,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/zoe-wellness-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 21486
+      },
+      {
+        "path": "assets/optimized/projects/zoe-wellness-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 19267
+      },
+      {
+        "path": "assets/optimized/projects/zoe-wellness-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 42992
+      },
+      {
+        "path": "assets/optimized/projects/zoe-wellness-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 38573
+      },
+      {
+        "path": "assets/optimized/projects/zoe-wellness-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 69778
+      },
+      {
+        "path": "assets/optimized/projects/zoe-wellness-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 66663
+      }
+    ]
+  },
+  {
+    "source": "assets/images/workspace-hero.jpg",
     "sourceSha256": "938aa3fee58161b9c1975159a254b7340b489a550fd5e77a04038a45824df43e",
     "sourceBytes": 563660,
     "sourceWidth": 1800,
@@ -688,7 +1436,7 @@
     ]
   },
   {
-    "source": "assets/services-workspace.jpg",
+    "source": "assets/images/services-workspace.jpg",
     "sourceSha256": "b9ceb3dbc983c1c2af6ef054682f28490d88d34d4d344b68b8fdced4de66ddb5",
     "sourceBytes": 260351,
     "sourceWidth": 1800,
@@ -746,7 +1494,7 @@
     ]
   },
   {
-    "source": "assets/structure-purpose-visual.jpg",
+    "source": "assets/images/structure-purpose-visual.jpg",
     "sourceSha256": "6ff8cf661cb86323eef872f61a5791568d42f861eb226b0fe9689da79cdba9e4",
     "sourceBytes": 224118,
     "sourceWidth": 1178,
@@ -792,7 +1540,7 @@
     ]
   },
   {
-    "source": "assets/junry-portrait.jpg",
+    "source": "assets/images/junry-portrait.jpg",
     "sourceSha256": "fdfb29194a15ed61cc8df74656d5fea323337d6b43cc79ed525c9519a6db7c74",
     "sourceBytes": 109645,
     "sourceWidth": 1122,
@@ -838,7 +1586,7 @@
     ]
   },
   {
-    "source": "assets/jv-white-logo.png",
+    "source": "assets/images/jv-white-logo.png",
     "sourceSha256": "e114bb273c52d244cbf154ddf717679228b7f3fa25d315d9bdd25805236bd7a0",
     "sourceBytes": 1090585,
     "sourceWidth": 1536,
