@@ -73,8 +73,8 @@ Open `http://localhost:5173`. No npm build or dev server is required.
 
 ## Verification
 
-- All 217 generated images decoded successfully with the expected dimensions.
-- All 30 source images were processed without modifying the originals.
+- All 237 generated images decoded successfully with the expected dimensions.
+- All 32 source images were processed without modifying the originals.
 - Asset references and responsive width descriptors were verified.
 - Homepage and archive checked at 1440, 820, and 390 px, including high-density
   tablet/mobile rendering, image loading, project filters, mobile navigation,

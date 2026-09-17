@@ -1,5 +1,75 @@
 [
   {
+    "source": "assets/projects/davis-media.webp",
+    "sourceSha256": "ca349ea57482730f3417fc1f9c40b5a9f9310143f931914e8c6fad5ee62864a2",
+    "sourceBytes": 431638,
+    "sourceWidth": 1920,
+    "sourceHeight": 3281,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/davis-media-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 21434
+      },
+      {
+        "path": "assets/optimized/projects/davis-media-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 17424
+      },
+      {
+        "path": "assets/optimized/projects/davis-media-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 42928
+      },
+      {
+        "path": "assets/optimized/projects/davis-media-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 35038
+      },
+      {
+        "path": "assets/optimized/projects/davis-media-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 72078
+      },
+      {
+        "path": "assets/optimized/projects/davis-media-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 57967
+      },
+      {
+        "path": "assets/optimized/projects/davis-media-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 102082
+      },
+      {
+        "path": "assets/optimized/projects/davis-media-1600.avif",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 82838
+      },
+      {
+        "path": "assets/optimized/projects/davis-media-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 126728
+      },
+      {
+        "path": "assets/optimized/projects/davis-media-1920.avif",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 95566
+      }
+    ]
+  },
+  {
     "source": "assets/projects/jimenez-real-estate-group.png",
     "sourceSha256": "f3b77c0916f54bf7018e3ef3282ab512315e95e777fa3c4dfc737219f7d215b7",
     "sourceBytes": 5385210,

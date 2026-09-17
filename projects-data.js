@@ -2,6 +2,7 @@
 // both read from this catalog, so project details stay in one place.
 window.JUNRY_PROJECT_FILTERS = Object.freeze([
   { id: 'all', label: 'All projects' },
+  { id: 'marketing-agency', label: 'Marketing agencies' },
   { id: 'legal-services', label: 'Legal services' },
   { id: 'construction', label: 'Construction' },
   { id: 'real-estate', label: 'Real estate' },
@@ -19,6 +20,19 @@ window.JUNRY_PROJECT_FILTERS = Object.freeze([
 ]);
 
 window.JUNRY_PROJECTS = Object.freeze([
+  {
+    id: 'davis-media',
+    name: 'Davis Media',
+    sector: 'Full-service marketing agency',
+    filters: ['marketing-agency'],
+    services: ['GoHighLevel', 'Website design', 'Responsive development', 'CRM integration', 'Lead capture'],
+    summary: 'A high-energy GoHighLevel website for an Atlanta marketing agency, organizing creative, advertising, production, CRM, and business-growth services around clear inquiry paths.',
+    image: 'assets/projects/davis-media.webp',
+    imageWidth: 1920,
+    imageHeight: 3281,
+    imageAlt: 'Davis Media website homepage presenting creative services, advertising, production, digital marketing, CRM software, consulting, and contact options.',
+    url: 'https://www.davismedia.com/'
+  },
   {
     id: 'jimenez-real-estate-group',
     name: 'Jimenez Real Estate Group',
