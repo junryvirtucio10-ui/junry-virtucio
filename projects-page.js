@@ -17,11 +17,16 @@
   const count = document.querySelector('#project-count');
   const empty = document.querySelector('#project-empty');
   const pad = value => String(value).padStart(2, '0');
+  const validFilters = configuredFilters.filter(filter => filter.id === 'all' || projects.some(project => project.filters.includes(filter.id)));
+  const requestedFilter = new URL(location.href).searchParams.get('filter') || 'all';
+  const initialFilter = validFilters.some(item => item.id === requestedFilter) ? requestedFilter : 'all';
+  const initialPriorityIndex = initialFilter === 'all' ? 0 : projects.findIndex(project => project.filters.includes(initialFilter));
 
   const makeProjectCard = (project, index) => {
     const article = document.createElement('article');
     article.className = 'archive-project';
     article.dataset.filters = project.filters.join(' ');
+    article.hidden = initialFilter !== 'all' && !project.filters.includes(initialFilter);
 
     const hasLiveUrl = Boolean(project.url && project.url !== '#');
     const media = document.createElement(hasLiveUrl ? 'a' : 'div');
@@ -35,26 +40,31 @@
       media.classList.add('is-static');
     }
 
-    const picture = document.createElement('picture');
-    picture.className = 'responsive-picture';
     const sizes = '(max-width: 760px) 90vw, (max-width: 1100px) 45vw, (min-width: 1631px) 474px, 29vw';
-    const source = document.createElement('source');
-    source.type = 'image/avif';
-    source.sizes = sizes;
-    source.srcset = project.thumbnail.avifSrcset;
-    picture.append(source);
+    const mountImage = (prioritize = false) => {
+      if (media.dataset.imageMounted === 'true') return;
+      const picture = document.createElement('picture');
+      picture.className = 'responsive-picture';
+      const source = document.createElement('source');
+      source.type = 'image/avif';
+      source.sizes = sizes;
+      source.srcset = project.thumbnail.avifSrcset;
+      picture.append(source);
 
-    const image = document.createElement('img');
-    image.width = project.thumbnail.width;
-    image.height = project.thumbnail.height;
-    image.loading = 'lazy';
-    image.decoding = 'async';
-    image.alt = project.imageAlt;
-    image.sizes = sizes;
-    image.srcset = project.thumbnail.srcset;
-    image.src = project.thumbnail.src;
-    picture.append(image);
-    media.append(picture);
+      const image = document.createElement('img');
+      image.width = project.thumbnail.width;
+      image.height = project.thumbnail.height;
+      image.loading = prioritize ? 'eager' : 'lazy';
+      if (prioritize) image.fetchPriority = 'high';
+      image.decoding = 'async';
+      image.alt = project.imageAlt;
+      image.sizes = sizes;
+      image.srcset = project.thumbnail.srcset;
+      image.src = project.thumbnail.src;
+      picture.append(image);
+      media.prepend(picture);
+      media.dataset.imageMounted = 'true';
+    };
 
     const visit = document.createElement('span');
     visit.className = 'archive-project-visit mono';
@@ -98,13 +108,14 @@
 
     body.append(eyebrow, title, summary, services);
     article.append(media, body);
-    return article;
+    if (!article.hidden) mountImage(index === initialPriorityIndex);
+    return { element: article, mountImage };
   };
 
   const cards = projects.map((project, index) => {
     const card = makeProjectCard(project, index);
-    grid.append(card);
-    return { element: card, project };
+    grid.append(card.element);
+    return { ...card, project };
   });
 
   const revealTargets = [
@@ -134,7 +145,6 @@
     revealTargets.forEach(target => revealObserver.observe(target));
   }
 
-  const validFilters = configuredFilters.filter(filter => filter.id === 'all' || projects.some(project => project.filters.includes(filter.id)));
   const buttons = validFilters.map(filter => {
     const button = document.createElement('button');
     button.className = 'filter-button mono';
@@ -156,20 +166,22 @@
   const applyFilter = (filter, updateUrl = true) => {
     const selected = validFilters.some(item => item.id === filter) ? filter : 'all';
     let visible = 0;
-    cards.forEach(({ element, project }) => {
+    cards.forEach(({ element, mountImage, project }) => {
       const show = selected === 'all' || project.filters.includes(selected);
+      if (show) mountImage(visible === 0);
       element.hidden = !show;
       if (show) visible += 1;
     });
     buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === selected)));
     mobileFilter.value = selected;
     const label = validFilters.find(item => item.id === selected)?.label || 'All';
+    const projectLabel = visible === 1 ? 'project' : 'projects';
     count.textContent = selected === 'all'
-      ? 'projects · all industries'
-      : `projects · ${label}`;
+      ? `${visible} ${projectLabel} · all industries`
+      : `${visible} ${projectLabel} · ${label}`;
     count.setAttribute('aria-label', selected === 'all'
-      ? 'Showing projects from all industries'
-      : `Showing projects in ${label}`);
+      ? `Showing ${visible} ${projectLabel} from all industries`
+      : `Showing ${visible} ${projectLabel} in ${label}`);
     empty.hidden = visible !== 0;
 
     if (updateUrl && !reducedMotion.matches && typeof grid.animate === 'function') {
@@ -192,6 +204,5 @@
 
   buttons.forEach(button => button.addEventListener('click', () => applyFilter(button.dataset.filter)));
   mobileFilter.addEventListener('change', () => applyFilter(mobileFilter.value));
-  const initialFilter = new URL(location.href).searchParams.get('filter') || 'all';
   applyFilter(initialFilter, false);
 })();

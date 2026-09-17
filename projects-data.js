@@ -4,6 +4,7 @@ window.JUNRY_PROJECT_FILTERS = Object.freeze([
   { id: 'all', label: 'All projects' },
   { id: 'legal-services', label: 'Legal services' },
   { id: 'construction', label: 'Construction' },
+  { id: 'real-estate', label: 'Real estate' },
   { id: 'site-services', label: 'Site services' },
   { id: 'interior-design', label: 'Interior design' },
   { id: 'personal-brand', label: 'Personal brand' },
@@ -18,6 +19,19 @@ window.JUNRY_PROJECT_FILTERS = Object.freeze([
 ]);
 
 window.JUNRY_PROJECTS = Object.freeze([
+  {
+    id: 'jimenez-real-estate-group',
+    name: 'Jimenez Real Estate Group',
+    sector: 'Real estate services',
+    filters: ['real-estate'],
+    services: ['GoHighLevel', 'Website design', 'Responsive development', 'Lead capture', 'CRM integration'],
+    summary: 'A conversion-focused GoHighLevel website for a Bellevue real-estate team, organizing property management, buying, selling, and investment services around trust-building content and CRM-connected inquiry paths.',
+    image: 'assets/projects/jimenez-real-estate-group.png',
+    imageWidth: 1920,
+    imageHeight: 4981,
+    imageAlt: 'Jimenez Real Estate Group website homepage presenting property management, home buying and selling, real-estate investing, testimonials, and contact options.',
+    url: 'https://jimenezrealestategroup.com/'
+  },
   {
     id: 'idiart-law-group',
     name: 'Idiart Law Group',

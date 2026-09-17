@@ -1,5 +1,75 @@
 [
   {
+    "source": "assets/projects/jimenez-real-estate-group.png",
+    "sourceSha256": "f3b77c0916f54bf7018e3ef3282ab512315e95e777fa3c4dfc737219f7d215b7",
+    "sourceBytes": 5385210,
+    "sourceWidth": 1920,
+    "sourceHeight": 4981,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/jimenez-real-estate-group-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 33664
+      },
+      {
+        "path": "assets/optimized/projects/jimenez-real-estate-group-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 28268
+      },
+      {
+        "path": "assets/optimized/projects/jimenez-real-estate-group-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 74402
+      },
+      {
+        "path": "assets/optimized/projects/jimenez-real-estate-group-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 63782
+      },
+      {
+        "path": "assets/optimized/projects/jimenez-real-estate-group-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 129484
+      },
+      {
+        "path": "assets/optimized/projects/jimenez-real-estate-group-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 115977
+      },
+      {
+        "path": "assets/optimized/projects/jimenez-real-estate-group-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 189070
+      },
+      {
+        "path": "assets/optimized/projects/jimenez-real-estate-group-1600.avif",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 170892
+      },
+      {
+        "path": "assets/optimized/projects/jimenez-real-estate-group-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 234906
+      },
+      {
+        "path": "assets/optimized/projects/jimenez-real-estate-group-1920.avif",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 212099
+      }
+    ]
+  },
+  {
     "source": "assets/projects/idiartlaw_com_2026-08-25-06-21-59.webp",
     "sourceSha256": "94c139456ce70da37a1abd79f3c2ceb5f231b23050bf761495aa05667844e77b",
     "sourceBytes": 962888,
