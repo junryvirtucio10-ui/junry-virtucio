@@ -2,21 +2,12 @@
 // both read from this catalog, so project details stay in one place.
 window.JUNRY_PROJECT_FILTERS = Object.freeze([
   { id: 'all', label: 'All projects' },
-  { id: 'marketing-agency', label: 'Marketing agencies' },
-  { id: 'legal-services', label: 'Legal services' },
-  { id: 'construction', label: 'Construction' },
-  { id: 'real-estate', label: 'Real estate' },
-  { id: 'site-services', label: 'Site services' },
-  { id: 'interior-design', label: 'Interior design' },
-  { id: 'personal-brand', label: 'Personal brand' },
-  { id: 'travel', label: 'Travel' },
-  { id: 'venture-groups', label: 'Venture groups' },
-  { id: 'healthcare', label: 'Healthcare' },
-  { id: 'ecommerce', label: 'E-commerce' },
-  { id: 'workforce', label: 'Workforce' },
-  { id: 'financial-services', label: 'Financial services' },
-  { id: 'home-services', label: 'Home services' },
-  { id: 'hospitality', label: 'Hospitality' }
+  { id: 'home-property', label: 'Home & property', filters: ['construction', 'real-estate', 'site-services', 'interior-design', 'home-services'] },
+  { id: 'professional-growth', label: 'Professional & growth', filters: ['marketing-agency', 'legal-services', 'personal-brand', 'venture-groups', 'financial-services'] },
+  { id: 'health-wellness', label: 'Health & wellness', filters: ['healthcare'] },
+  { id: 'ecommerce', label: 'E-commerce', filters: ['ecommerce'], aliases: ['commerce-retail'] },
+  { id: 'people-workforce', label: 'People & workforce', filters: ['workforce'] },
+  { id: 'travel-hospitality', label: 'Travel & hospitality', filters: ['travel', 'hospitality'] }
 ]);
 
 window.JUNRY_PROJECTS = Object.freeze([

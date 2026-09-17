@@ -16,7 +16,7 @@
 .archive-controls-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: .8rem; padding-bottom: .8rem; border-bottom: 1px solid var(--hairline); }
 .archive-filter-label { display: inline-flex; align-items: center; gap: .6rem; margin: 0; }
 .archive-filter-label > span { width: .65rem; height: .65rem; flex: 0 0 auto; border-radius: 50%; background: var(--cobalt); box-shadow: 0 0 0 4px color-mix(in oklch, var(--cobalt) 12%, transparent); }
-.project-filters { min-width: 0; min-height: 6.25rem; display: flex; flex-wrap: wrap; align-content: flex-start; align-items: center; gap: .5rem; }
+.project-filters { min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
 .mobile-project-filter { display: none; }
 .filter-button { min-width: 0; max-width: 100%; min-height: 44px; display: inline-flex; align-items: center; padding: .65rem .85rem; border: 1px solid var(--hairline); border-radius: 3px; background: color-mix(in oklch, var(--white) 64%, transparent); color: var(--ink); cursor: pointer; text-align: left; white-space: nowrap; transition: border-color .22s ease, background-color .22s ease, color .22s ease, box-shadow .22s ease, transform .22s var(--archive-ease); }
 .filter-button:hover { border-color: var(--cobalt); background: var(--white); box-shadow: 0 4px 0 color-mix(in oklch, var(--cobalt) 18%, transparent); transform: translateY(-2px); }

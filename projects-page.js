@@ -17,16 +17,28 @@
   const count = document.querySelector('#project-count');
   const empty = document.querySelector('#project-empty');
   const pad = value => String(value).padStart(2, '0');
-  const validFilters = configuredFilters.filter(filter => filter.id === 'all' || projects.some(project => project.filters.includes(filter.id)));
+  const matchesFilter = (filter, project) => {
+    if (filter.id === 'all') return true;
+    const sourceFilters = filter.filters || [filter.id];
+    return sourceFilters.some(sourceFilter => project.filters.includes(sourceFilter));
+  };
+  const validFilters = configuredFilters.filter(filter => filter.id === 'all' || projects.some(project => matchesFilter(filter, project)));
   const requestedFilter = new URL(location.href).searchParams.get('filter') || 'all';
-  const initialFilter = validFilters.some(item => item.id === requestedFilter) ? requestedFilter : 'all';
-  const initialPriorityIndex = initialFilter === 'all' ? 0 : projects.findIndex(project => project.filters.includes(initialFilter));
+  // Older links used the original, more granular industry IDs. Resolve them to
+  // their new client-type group so shared links keep showing relevant work.
+  const resolveFilter = filter => {
+    if (validFilters.some(item => item.id === filter)) return filter;
+    return validFilters.find(item => item.filters?.includes(filter) || item.aliases?.includes(filter))?.id || 'all';
+  };
+  const initialFilter = resolveFilter(requestedFilter);
+  const initialFilterConfig = validFilters.find(item => item.id === initialFilter);
+  const initialPriorityIndex = initialFilter === 'all' ? 0 : projects.findIndex(project => matchesFilter(initialFilterConfig, project));
 
   const makeProjectCard = (project, index) => {
     const article = document.createElement('article');
     article.className = 'archive-project';
     article.dataset.filters = project.filters.join(' ');
-    article.hidden = initialFilter !== 'all' && !project.filters.includes(initialFilter);
+    article.hidden = initialFilter !== 'all' && !matchesFilter(initialFilterConfig, project);
 
     const hasLiveUrl = Boolean(project.url && project.url !== '#');
     const media = document.createElement(hasLiveUrl ? 'a' : 'div');
@@ -164,10 +176,11 @@
   });
 
   const applyFilter = (filter, updateUrl = true) => {
-    const selected = validFilters.some(item => item.id === filter) ? filter : 'all';
+    const selected = resolveFilter(filter);
+    const selectedFilter = validFilters.find(item => item.id === selected);
     let visible = 0;
     cards.forEach(({ element, mountImage, project }) => {
-      const show = selected === 'all' || project.filters.includes(selected);
+      const show = matchesFilter(selectedFilter, project);
       if (show) mountImage(visible === 0);
       element.hidden = !show;
       if (show) visible += 1;
@@ -177,10 +190,10 @@
     const label = validFilters.find(item => item.id === selected)?.label || 'All';
     const projectLabel = visible === 1 ? 'project' : 'projects';
     count.textContent = selected === 'all'
-      ? `${visible} ${projectLabel} · all industries`
+      ? `${visible} ${projectLabel} · all client types`
       : `${visible} ${projectLabel} · ${label}`;
     count.setAttribute('aria-label', selected === 'all'
-      ? `Showing ${visible} ${projectLabel} from all industries`
+      ? `Showing ${visible} ${projectLabel} across all client types`
       : `Showing ${visible} ${projectLabel} in ${label}`);
     empty.hidden = visible !== 0;
 
