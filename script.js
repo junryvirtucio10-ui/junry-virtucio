@@ -35,24 +35,79 @@
     });
   });
   const services = [...document.querySelectorAll('.service')];
+  const serviceList = document.querySelector('.service-list');
+  const servicePreview = document.querySelector('.service-preview');
+  const previewOverlay = servicePreview.querySelector('.preview-overlay');
   const previewTitle = document.querySelector('#preview-title');
-  const selectService = service => {
+  const previewIndex = document.querySelector('#preview-index');
+  const previewOutcome = document.querySelector('#preview-outcome');
+  const previewOutputs = document.querySelector('#preview-outputs');
+  const previewAnnouncement = document.querySelector('#preview-announcement');
+  const previewIndexItems = [...document.querySelectorAll('.preview-service-index li')];
+  const serviceAccents = {
+    cobalt: 'var(--cobalt)',
+    coral: 'var(--coral)',
+    acid: 'var(--acid)',
+    teal: 'var(--teal)'
+  };
+
+  const updateServicePreview = (service, announce = false) => {
+    const outputs = service.dataset.serviceOutputs.split('|');
+    const activeIndex = services.indexOf(service);
+    servicePreview.style.setProperty('--service-accent', serviceAccents[service.dataset.serviceAccent] || 'var(--coral)');
     previewTitle.textContent = service.dataset.service;
+    previewIndex.textContent = `${service.dataset.serviceIndex} / ${String(services.length).padStart(2, '0')}`;
+    previewOutcome.textContent = service.dataset.serviceOutcome;
+    previewOutputs.replaceChildren(...outputs.map(output => {
+      const item = document.createElement('span');
+      item.textContent = output;
+      return item;
+    }));
+    previewIndexItems.forEach((item, index) => item.classList.toggle('is-active', index === activeIndex));
+
+    if (announce) previewAnnouncement.textContent = `${service.dataset.service} selected. ${service.dataset.serviceOutcome}`;
+    if (reduced.matches) return;
+
+    previewOverlay.getAnimations().forEach(animation => animation.cancel());
+    previewOverlay.animate([
+      { opacity: .2, transform: 'translateY(14px)' },
+      { opacity: 1, transform: 'translateY(0)' }
+    ], { duration: 380, easing: 'cubic-bezier(.22, .7, .15, 1)' });
+    [...previewOutputs.children].forEach((item, index) => item.animate([
+      { opacity: 0, transform: 'translateY(6px)' },
+      { opacity: 1, transform: 'translateY(0)' }
+    ], { duration: 280, delay: 75 + index * 45, fill: 'both', easing: 'ease-out' }));
+  };
+
+  const selectService = service => {
     services.forEach(item => {
       const isSelected = item === service;
       const button = item.querySelector('.service-button');
       const panel = item.querySelector('.service-panel');
+      item.classList.toggle('is-selected', isSelected);
       button.setAttribute('aria-expanded', String(isSelected));
       panel.setAttribute('aria-hidden', String(!isSelected));
       panel.inert = !isSelected;
     });
+    updateServicePreview(service, true);
   };
   services.forEach(service => {
     const button = service.querySelector('.service-button');
     button.addEventListener('click', () => selectService(service));
-    button.addEventListener('focus', () => { previewTitle.textContent = service.dataset.service; });
-    service.addEventListener('pointerenter', () => { if (!coarse.matches) previewTitle.textContent = service.dataset.service; });
+    button.addEventListener('focus', () => updateServicePreview(service));
+    service.addEventListener('pointerenter', () => { if (!coarse.matches) updateServicePreview(service); });
+    service.addEventListener('pointerleave', () => {
+      if (coarse.matches) return;
+      const selected = services.find(item => item.querySelector('.service-button').getAttribute('aria-expanded') === 'true');
+      if (selected) updateServicePreview(selected);
+    });
   });
+  serviceList.addEventListener('focusout', () => requestAnimationFrame(() => {
+    if (serviceList.contains(document.activeElement)) return;
+    const selected = services.find(item => item.querySelector('.service-button').getAttribute('aria-expanded') === 'true');
+    if (selected) updateServicePreview(selected);
+  }));
+  updateServicePreview(services.find(service => service.querySelector('.service-button').getAttribute('aria-expanded') === 'true') || services[0]);
 
   const steps = [...document.querySelectorAll('.process-step')];
   const processList = document.querySelector('#process-list');

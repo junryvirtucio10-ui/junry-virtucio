@@ -38,7 +38,32 @@
   const mobileMenu = root.querySelector('#mobile-menu');
   const compactNav = matchMedia('(max-width: 1100px)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const stickyArchiveControls = document.querySelector('.archive-controls');
+  const scrollDirectionThreshold = 10;
   let lastY = scrollY;
+
+  const setNavHidden = hidden => {
+    if (nav.classList.contains('is-hidden') === hidden) return;
+
+    const previousControlsRect = stickyArchiveControls?.getBoundingClientRect();
+    stickyArchiveControls?.getAnimations().forEach(animation => animation.cancel());
+    nav.classList.toggle('is-hidden', hidden);
+    document.body.classList.toggle('site-nav-hidden', hidden);
+
+    if (!stickyArchiveControls || reduced.matches || !previousControlsRect || previousControlsRect.bottom <= 0 || previousControlsRect.top >= innerHeight) return;
+
+    const nextControlsTop = stickyArchiveControls.getBoundingClientRect().top;
+    const offset = previousControlsRect.top - nextControlsTop;
+    if (Math.abs(offset) < 1) return;
+
+    stickyArchiveControls.animate([
+      { transform: `translate3d(0, ${offset}px, 0)` },
+      { transform: 'translate3d(0, 0, 0)' }
+    ], {
+      duration: 460,
+      easing: 'cubic-bezier(.22, .7, .15, 1)'
+    });
+  };
 
   const setMenu = (open, restoreFocus = true) => {
     menuButton.setAttribute('aria-expanded', String(open));
@@ -78,7 +103,14 @@
 
   addEventListener('scroll', () => {
     const y = scrollY;
-    nav.classList.toggle('is-hidden', y > lastY && y > 180 && !mobileMenu.classList.contains('open'));
+    const distance = y - lastY;
+    if (y <= 180) {
+      setNavHidden(false);
+      lastY = y;
+      return;
+    }
+    if (Math.abs(distance) < scrollDirectionThreshold) return;
+    setNavHidden(y > lastY && y > 180 && !mobileMenu.classList.contains('open'));
     lastY = y;
   }, { passive: true });
 
