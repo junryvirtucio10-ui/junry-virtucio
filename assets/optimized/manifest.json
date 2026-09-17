@@ -1,5 +1,215 @@
 [
   {
+    "source": "assets/projects/zoelogics.png",
+    "sourceSha256": "4b4b596c0d943fecb32d66f2ee183e9652412cc0b23374f9e7594b9606ebd0dd",
+    "sourceBytes": 3300115,
+    "sourceWidth": 1920,
+    "sourceHeight": 3660,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/zoelogics-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 25980
+      },
+      {
+        "path": "assets/optimized/projects/zoelogics-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 22209
+      },
+      {
+        "path": "assets/optimized/projects/zoelogics-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 53246
+      },
+      {
+        "path": "assets/optimized/projects/zoelogics-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 47569
+      },
+      {
+        "path": "assets/optimized/projects/zoelogics-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 94744
+      },
+      {
+        "path": "assets/optimized/projects/zoelogics-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 84488
+      },
+      {
+        "path": "assets/optimized/projects/zoelogics-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 136466
+      },
+      {
+        "path": "assets/optimized/projects/zoelogics-1600.avif",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 123874
+      },
+      {
+        "path": "assets/optimized/projects/zoelogics-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 172476
+      },
+      {
+        "path": "assets/optimized/projects/zoelogics-1920.avif",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 151796
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/home-growth-capital.png",
+    "sourceSha256": "3c2ddc20f39eaa81be67590ea809b6016688a95446feb92d1991861598067fb0",
+    "sourceBytes": 4068183,
+    "sourceWidth": 1920,
+    "sourceHeight": 6295,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/home-growth-capital-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 16132
+      },
+      {
+        "path": "assets/optimized/projects/home-growth-capital-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 14173
+      },
+      {
+        "path": "assets/optimized/projects/home-growth-capital-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 35708
+      },
+      {
+        "path": "assets/optimized/projects/home-growth-capital-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 33425
+      },
+      {
+        "path": "assets/optimized/projects/home-growth-capital-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 65228
+      },
+      {
+        "path": "assets/optimized/projects/home-growth-capital-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 63316
+      },
+      {
+        "path": "assets/optimized/projects/home-growth-capital-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 97236
+      },
+      {
+        "path": "assets/optimized/projects/home-growth-capital-1600.avif",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 94740
+      },
+      {
+        "path": "assets/optimized/projects/home-growth-capital-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 123070
+      },
+      {
+        "path": "assets/optimized/projects/home-growth-capital-1920.avif",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 111613
+      }
+    ]
+  },
+  {
+    "source": "assets/projects/the-torch-guys.png",
+    "sourceSha256": "6f773b098a2bc2c4ad562622521291accfd37c9afc03e92c31ede158517ecba5",
+    "sourceBytes": 4456252,
+    "sourceWidth": 1920,
+    "sourceHeight": 4956,
+    "crop": "top 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/the-torch-guys-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 25702
+      },
+      {
+        "path": "assets/optimized/projects/the-torch-guys-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 21077
+      },
+      {
+        "path": "assets/optimized/projects/the-torch-guys-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 53706
+      },
+      {
+        "path": "assets/optimized/projects/the-torch-guys-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 47761
+      },
+      {
+        "path": "assets/optimized/projects/the-torch-guys-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 100150
+      },
+      {
+        "path": "assets/optimized/projects/the-torch-guys-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 90345
+      },
+      {
+        "path": "assets/optimized/projects/the-torch-guys-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 148122
+      },
+      {
+        "path": "assets/optimized/projects/the-torch-guys-1600.avif",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 138227
+      },
+      {
+        "path": "assets/optimized/projects/the-torch-guys-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 192322
+      },
+      {
+        "path": "assets/optimized/projects/the-torch-guys-1920.avif",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 172112
+      }
+    ]
+  },
+  {
     "source": "assets/projects/davis-media.webp",
     "sourceSha256": "ca349ea57482730f3417fc1f9c40b5a9f9310143f931914e8c6fad5ee62864a2",
     "sourceBytes": 431638,

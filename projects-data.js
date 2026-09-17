@@ -21,6 +21,45 @@ window.JUNRY_PROJECT_FILTERS = Object.freeze([
 
 window.JUNRY_PROJECTS = Object.freeze([
   {
+    id: 'zoelogics',
+    name: 'ZoëLogics',
+    sector: 'Health supplements',
+    filters: ['healthcare', 'ecommerce'],
+    services: ['GoHighLevel', 'E-commerce development', 'Product catalog', 'Product merchandising', 'Lead capture'],
+    summary: 'A GoHighLevel health-supplement storefront combining product discovery, promotional bundles, wellness education, customer reviews, social content, and newsletter capture in one responsive experience.',
+    image: 'assets/projects/zoelogics.png',
+    imageWidth: 1920,
+    imageHeight: 3660,
+    imageAlt: 'ZoëLogics website homepage featuring natural supplements, promotional bundles, a product catalog, customer reviews, social content, and newsletter signup.',
+    url: 'https://zoelogics.com/'
+  },
+  {
+    id: 'home-growth-capital',
+    name: 'Home Growth Capital',
+    sector: 'Cash home buyer',
+    filters: ['real-estate'],
+    services: ['GoHighLevel', 'Landing-page design', 'Responsive development', 'Lead capture', 'Form integration'],
+    summary: 'A conversion-focused GoHighLevel website for a Bellevue cash-home buyer, guiding homeowners through the offer process, as-is selling benefits, proof, reviews, and a detailed property inquiry form.',
+    image: 'assets/projects/home-growth-capital.png',
+    imageWidth: 1920,
+    imageHeight: 6295,
+    imageAlt: 'Home Growth Capital website homepage explaining its cash-home-buying process, as-is selling benefits, customer reviews, and property inquiry form.',
+    url: 'https://www.homegrowthcapital.com/home'
+  },
+  {
+    id: 'the-torch-guys',
+    name: 'The Torch Guys',
+    sector: 'Fireplace and outdoor living retailer',
+    filters: ['ecommerce'],
+    services: ['Shopify', 'E-commerce development', 'Product catalog', 'Brand navigation', 'Responsive design'],
+    summary: 'A category-rich Shopify storefront for fireplaces and outdoor living products, combining guided product discovery, brand navigation, trade-program benefits, education, reviews, and bestseller merchandising.',
+    image: 'assets/projects/the-torch-guys.png',
+    imageWidth: 1920,
+    imageHeight: 4956,
+    imageAlt: 'The Torch Guys Shopify homepage featuring fireplace categories, brand navigation, shopping benefits, reviews, and best-selling products.',
+    url: 'https://thetorchguys.com/'
+  },
+  {
     id: 'davis-media',
     name: 'Davis Media',
     sector: 'Full-service marketing agency',
@@ -363,8 +402,8 @@ window.JUNRY_PROJECTS = Object.freeze([
     name: 'Zoë Wellness Center',
     sector: 'Wellness services',
     filters: ['healthcare'],
-    services: ['Website development', 'Responsive design', 'Service presentation', 'Results storytelling', 'Appointment conversion'],
-    summary: 'A wellness website connecting natural weight-loss programs, coaching, products, spa services, client transformations, program steps, and location-based appointment paths.',
+    services: ['GoHighLevel', 'Website design', 'Responsive design', 'Service presentation', 'Appointment conversion'],
+    summary: 'A GoHighLevel wellness website connecting natural weight-loss programs, coaching, products, spa services, client transformations, program steps, and location-based appointment paths.',
     image: 'assets/projects/zoe-wellness.webp',
     imageWidth: 1440,
     imageHeight: 3191,
