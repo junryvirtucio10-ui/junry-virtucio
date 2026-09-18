@@ -3,7 +3,7 @@
 window.JUNRY_PROJECT_FILTERS = Object.freeze([
   { id: 'all', label: 'All projects' },
   { id: 'home-property', label: 'Home & property', filters: ['construction', 'real-estate', 'site-services', 'interior-design', 'home-services'] },
-  { id: 'professional-growth', label: 'Professional & growth', filters: ['marketing-agency', 'legal-services', 'personal-brand', 'venture-groups', 'financial-services'] },
+  { id: 'professional-growth', label: 'Professional & growth', filters: ['marketing-agency', 'digital-marketing', 'legal-services', 'personal-brand', 'venture-groups', 'financial-services'] },
   { id: 'health-wellness', label: 'Health & wellness', filters: ['healthcare'] },
   { id: 'ecommerce', label: 'E-commerce', filters: ['ecommerce'], aliases: ['commerce-retail'] },
   { id: 'people-workforce', label: 'People & workforce', filters: ['workforce'] },
@@ -11,6 +11,19 @@ window.JUNRY_PROJECT_FILTERS = Object.freeze([
 ]);
 
 window.JUNRY_PROJECTS = Object.freeze([
+  {
+    id: 'life-regeneration-church',
+    name: 'Life Regeneration Church',
+    sector: 'Church digital marketing',
+    filters: ['digital-marketing'],
+    services: ['Content strategy', 'Graphic design', 'Video editing', 'Audience growth', 'Facebook, Instagram, TikTok & YouTube'],
+    summary: 'An end-to-end social media engagement for Life Regeneration Church, shaping content, graphics, video edits, audience growth, and a consistent presence across Facebook, Instagram, TikTok, and YouTube.',
+    image: 'assets/projects/life-regeneration-church.webp',
+    imageWidth: 1920,
+    imageHeight: 1080,
+    imageAlt: 'Life Regeneration Church Facebook page featuring its golden "Accelerated Favor" campaign artwork and church profile.',
+    url: ''
+  },
   {
     id: 'zoelogics',
     name: 'ZoëLogics',

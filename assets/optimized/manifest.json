@@ -1,5 +1,51 @@
 [
   {
+    "source": "assets/projects/life-regeneration-church.webp",
+    "sourceSha256": "fa69f5c29acd244b93f90931227a5941177a308602462d41312674251fb3d427",
+    "sourceBytes": 180502,
+    "sourceWidth": 1920,
+    "sourceHeight": 1080,
+    "crop": "center 4:3",
+    "outputs": [
+      {
+        "path": "assets/optimized/projects/life-regeneration-church-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 43472
+      },
+      {
+        "path": "assets/optimized/projects/life-regeneration-church-480.avif",
+        "width": 480,
+        "height": 360,
+        "bytes": 35670
+      },
+      {
+        "path": "assets/optimized/projects/life-regeneration-church-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 86006
+      },
+      {
+        "path": "assets/optimized/projects/life-regeneration-church-800.avif",
+        "width": 800,
+        "height": 600,
+        "bytes": 73558
+      },
+      {
+        "path": "assets/optimized/projects/life-regeneration-church-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 139140
+      },
+      {
+        "path": "assets/optimized/projects/life-regeneration-church-1200.avif",
+        "width": 1200,
+        "height": 900,
+        "bytes": 122550
+      }
+    ]
+  },
+  {
     "source": "assets/projects/zoelogics.png",
     "sourceSha256": "4b4b596c0d943fecb32d66f2ee183e9652412cc0b23374f9e7594b9606ebd0dd",
     "sourceBytes": 3300115,

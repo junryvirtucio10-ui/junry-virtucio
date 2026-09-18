@@ -127,7 +127,9 @@
     const project = trigger.dataset.dialogProject;
     dialogTitle.textContent = project;
     dialogCopy.textContent = caseCopy[project] || 'Project details can be shared during a project conversation.';
-    dialogLive.href = trigger.dataset.projectUrl;
+    const projectUrl = trigger.dataset.projectUrl;
+    dialogLive.hidden = !projectUrl;
+    if (projectUrl) dialogLive.href = projectUrl;
     dialog.showModal();
   }));
   dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
