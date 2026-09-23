@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>try { const savedTheme = localStorage.getItem('junry-theme'); document.documentElement.dataset.theme = savedTheme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); } catch {} </script>
   <meta name="google-site-verification" content="nxlav-JCHsvYIQtSZTMugQ_X2jGi2PzGNa7b2y4HYU4">
   <meta name="description" content="Junry Virtucio is a website developer and digital marketer in Cebu, Philippines, building thoughtful WordPress, e-commerce, SEO, and responsive website experiences.">
   <meta name="theme-color" content="#faf7f0">
@@ -27,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=19">
 </head>
 <body data-page="home">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -35,16 +36,7 @@
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title" data-od-id="hero">
-      <div class="shell hero-grid">
-        <aside class="info-rail" aria-label="Location and availability" data-od-id="hero-info-rail">
-          <div class="rail-list mono">
-            <span>Cebu, Philippines</span><span>Remote worldwide</span>
-            <span class="rail-time" id="cebu-time">Cebu time —:—</span>
-            <span><i class="status-dot" aria-hidden="true"></i>Selected projects</span>
-          </div>
-          <div class="scroll-cue mono" aria-hidden="true"><span>Scroll to explore</span><span class="scroll-line"></span></div>
-        </aside>
-
+      <div class="hero-grid">
         <div class="hero-copy">
           <p class="hero-eyebrow kicker">Independent web developer and digital marketer · Cebu, Philippines</p>
           <h1 class="hero-title" id="hero-title" data-od-id="hero-heading">
@@ -60,26 +52,10 @@
           <p class="availability mono"><i class="status-dot" aria-hidden="true"></i>Available for selected projects and agency collaborations · 2026</p>
         </div>
 
-        <div class="hero-visual" data-od-id="hero-visual">
-          <div class="workspace-frame" data-parallax="-7">
-            <picture class="responsive-picture">
-              <source type="image/avif" srcset="assets/optimized/workspace-hero-480.avif 480w, assets/optimized/workspace-hero-800.avif 800w, assets/optimized/workspace-hero-1200.avif 1200w, assets/optimized/workspace-hero-1600.avif 1600w" sizes="(max-width: 760px) 400px, (max-width: 1100px) 70vw, 500px">
-              <img src="assets/optimized/workspace-hero-800.webp" srcset="assets/optimized/workspace-hero-480.webp 480w, assets/optimized/workspace-hero-800.webp 800w, assets/optimized/workspace-hero-1200.webp 1200w, assets/optimized/workspace-hero-1600.webp 1600w" sizes="(max-width: 760px) 400px, (max-width: 1100px) 70vw, 500px" width="1800" height="2250" fetchpriority="high" decoding="async" alt="Minimal workspace with a monitor and tablet displaying digital product interfaces.">
-            </picture>
-          </div>
-          <div class="project-window" data-parallax="14">
-            <div class="browser-bar" aria-hidden="true"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span></div>
-            <div class="hero-project-preview">
-              <picture class="responsive-picture">
-                <source type="image/avif" srcset="assets/optimized/projects/life-regeneration-church-480.avif 480w, assets/optimized/projects/life-regeneration-church-800.avif 800w, assets/optimized/projects/life-regeneration-church-1200.avif 1200w" sizes="(max-width: 760px) 81vw, (max-width: 1100px) 60vw, 30vw">
-                <img src="assets/optimized/projects/life-regeneration-church-800.webp" srcset="assets/optimized/projects/life-regeneration-church-480.webp 480w, assets/optimized/projects/life-regeneration-church-800.webp 800w, assets/optimized/projects/life-regeneration-church-1200.webp 1200w" sizes="(max-width: 760px) 81vw, (max-width: 1100px) 60vw, 30vw" width="1200" height="900" decoding="async" alt="Life Regeneration Church Facebook page featuring its golden Accelerated Favor campaign artwork.">
-              </picture>
-              <div class="hero-project-label"><span class="mono">SELECTED WORK / 01</span><strong>Life Regeneration Church</strong></div>
-            </div>
-          </div>
-          <div class="cobalt-tab mono">DIGITAL / MULTI-PLATFORM</div>
-          <div class="visual-meta mono">P/EC — 001<br>DESIGN · BUILD · QA<br>CEBU → WORLDWIDE</div>
-        </div>
+        <figure class="hero-portrait" data-od-id="hero-visual">
+          <img class="hero-portrait-default" src="assets/images/hero-portrait-default.png" width="1086" height="1448" fetchpriority="high" decoding="async" alt="Junry Virtucio wearing a black suit against a gray studio background.">
+          <img class="hero-portrait-hover" src="assets/images/hero-portrait-glasses.png" width="1086" height="1448" decoding="async" alt="" aria-hidden="true">
+        </figure>
       </div>
     </section>
 
@@ -392,8 +368,8 @@
     </div>
   </dialog>
 
-  <script src="site-navigation.js?v=4" defer></script>
+  <script src="site-navigation.js?v=5" defer></script>
   <script src="projects-data.js?v=12" defer></script>
-  <script src="script.js?v=8" defer></script>
+  <script src="script.js?v=10" defer></script>
 </body>
 </html>

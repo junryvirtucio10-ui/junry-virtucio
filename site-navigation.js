@@ -19,6 +19,11 @@
   };
   const desktopLinks = navigationItems.map(item => `<a class="nav-link${item.page === currentPage ? ' active' : ''}" href="${item.href}"${item.section ? ` data-section="${item.section}"` : ''}${item.page === currentPage ? ' aria-current="page"' : ''}>${item.label}</a>`).join('');
   const mobileLinks = navigationItems.map(item => `<a href="${item.href}"${linkAttributes(item)}>${item.label} <span>${item.marker}</span></a>`).join('');
+  const savedTheme = (() => {
+    try { return localStorage.getItem('junry-theme'); } catch { return null; }
+  })();
+  const initialTheme = savedTheme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.dataset.theme = initialTheme;
 
   root.innerHTML = `
     <header class="site-nav" id="site-nav" data-od-id="floating-navigation">
@@ -26,8 +31,11 @@
         <img class="brand-logo" src="assets/optimized/jv-white-logo-198.webp" width="198" height="132" decoding="async" alt=""><span class="brand-note">WEB DESIGN +<br>DEVELOPMENT</span>
       </a>
       <nav class="desktop-links" aria-label="Primary navigation">${desktopLinks}</nav>
-      <a class="nav-action" href="${sectionHref('contact')}" data-od-id="nav-start-project">Start a project ↗</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-od-id="mobile-menu-toggle">Menu</button>
+      <div class="nav-controls">
+        <a class="nav-action" href="${sectionHref('contact')}" data-od-id="nav-start-project">Start a project ↗</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme" data-od-id="theme-toggle"><span class="theme-toggle-icon" aria-hidden="true"></span><span class="theme-toggle-label">Dark theme</span></button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-od-id="mobile-menu-toggle">Menu</button>
+      </div>
     </header>
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true" data-od-id="mobile-menu">
       <nav aria-label="Mobile navigation">${mobileLinks}</nav>
@@ -35,12 +43,40 @@
 
   const nav = root.querySelector('#site-nav');
   const menuButton = root.querySelector('.menu-toggle');
+  const themeButton = root.querySelector('.theme-toggle');
   const mobileMenu = root.querySelector('#mobile-menu');
   const compactNav = matchMedia('(max-width: 1100px)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const stickyArchiveControls = document.querySelector('.archive-controls');
   const scrollDirectionThreshold = 10;
   let lastY = scrollY;
+
+  const setTheme = theme => {
+    const isDark = theme === 'dark';
+    document.documentElement.dataset.theme = isDark ? 'dark' : 'light';
+    themeButton.setAttribute('aria-label', `Switch to ${isDark ? 'light' : 'dark'} theme`);
+    themeButton.setAttribute('title', `Switch to ${isDark ? 'light' : 'dark'} theme`);
+    themeButton.querySelector('.theme-toggle-label').textContent = `${isDark ? 'Light' : 'Dark'} theme`;
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', isDark ? '#171615' : '#faf7f0');
+    try { localStorage.setItem('junry-theme', isDark ? 'dark' : 'light'); } catch { /* Storage may be unavailable. */ }
+  };
+  setTheme(initialTheme);
+  themeButton.addEventListener('click', () => {
+    const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    if (reduced.matches || typeof document.startViewTransition !== 'function') {
+      setTheme(nextTheme);
+      return;
+    }
+
+    const buttonRect = themeButton.getBoundingClientRect();
+    document.documentElement.style.setProperty('--theme-x', `${buttonRect.left + buttonRect.width / 2}px`);
+    document.documentElement.style.setProperty('--theme-y', `${buttonRect.top + buttonRect.height / 2}px`);
+    const transition = document.startViewTransition(() => setTheme(nextTheme));
+    transition.finished.finally(() => {
+      document.documentElement.style.removeProperty('--theme-x');
+      document.documentElement.style.removeProperty('--theme-y');
+    });
+  });
 
   const setNavHidden = hidden => {
     if (nav.classList.contains('is-hidden') === hidden) return;

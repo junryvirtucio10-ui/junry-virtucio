@@ -1,6 +1,43 @@
 ﻿(() => {
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const coarse = matchMedia('(pointer: coarse)');
+  const revealTargets = [...document.querySelectorAll('.work-header, .project, .interlude-grid, .services-head, .services-grid, .process-grid, .about-header, .about-layout, .principles, .contact-head, .contact-grid, .work-archive-cta')];
+  const parallaxTargets = [...document.querySelectorAll('.interlude-visual, .service-preview')];
+  parallaxTargets.forEach(target => target.classList.add('scroll-parallax'));
+
+  if (!reduced.matches) {
+    revealTargets.forEach((element, index) => {
+      element.classList.add('reveal-on-scroll');
+      element.style.setProperty('--reveal-delay', `${Math.min(index % 4, 3) * 70}ms`);
+    });
+
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      }), { rootMargin: '0px 0px -12% 0px', threshold: .08 });
+      revealTargets.forEach(target => revealObserver.observe(target));
+    } else revealTargets.forEach(target => target.classList.add('is-visible'));
+  }
+
+  let scrollFrame = 0;
+  const updateScrollEffects = () => {
+    scrollFrame = 0;
+    const maxScroll = document.documentElement.scrollHeight - innerHeight;
+    document.documentElement.style.setProperty('--scroll-progress', `${maxScroll > 0 ? (scrollY / maxScroll) * 100 : 0}%`);
+    if (reduced.matches || coarse.matches) return;
+    parallaxTargets.forEach(element => {
+      const rect = element.parentElement.getBoundingClientRect();
+      const amount = Number(element.dataset.parallax || (element.classList.contains('hero-portrait') ? 18 : 28));
+      const progress = Math.max(-1, Math.min(1, (innerHeight / 2 - rect.top - rect.height / 2) / innerHeight));
+      element.style.setProperty('--parallax-y', `${progress * amount}px`);
+    });
+  };
+  const requestScrollEffects = () => { if (!scrollFrame) scrollFrame = requestAnimationFrame(updateScrollEffects); };
+  requestScrollEffects();
+  addEventListener('scroll', requestScrollEffects, { passive: true });
 
   const inPageLinks = [...document.querySelectorAll('a[href^="#"]:not([href="#"])')].filter(link => !link.closest('#site-navigation-root'));
   inPageLinks.forEach(link => link.addEventListener('click', e => {
@@ -11,21 +48,6 @@
     target.focus({ preventScroll: true });
     window.scrollTo({ top: target.offsetTop - 80, behavior: reduced.matches ? 'auto' : 'smooth' });
   }));
-
-  addEventListener('scroll', () => {
-    if (!reduced.matches && !coarse.matches) document.querySelectorAll('[data-parallax]').forEach(el => {
-      const rect = el.parentElement.getBoundingClientRect();
-      const amount = Number(el.dataset.parallax);
-      const progress = Math.max(-1, Math.min(1, (innerHeight / 2 - rect.top - rect.height / 2) / innerHeight));
-      el.style.transform = `translate3d(0, ${progress * amount}px, 0)`;
-    });
-  }, { passive: true });
-
-  const clock = document.querySelector('#cebu-time');
-  const updateTime = () => {
-    clock.textContent = `Cebu time ${new Intl.DateTimeFormat('en-PH', { timeZone: 'Asia/Manila', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date())}`;
-  };
-  updateTime(); setInterval(updateTime, 30000);
 
   if (!coarse.matches) document.querySelectorAll('.project-media').forEach(media => {
     media.addEventListener('pointermove', e => {
