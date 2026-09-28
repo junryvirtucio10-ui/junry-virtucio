@@ -9,7 +9,7 @@
   updateTime();
   setInterval(updateTime, 30000);
 
-  const projects = window.JUNRY_PROJECTS || [];
+  const projects = (window.JUNRY_PROJECTS || []).filter(project => project.visible !== false);
   const configuredFilters = window.JUNRY_PROJECT_FILTERS || [{ id: 'all', label: 'All' }];
   const filterBar = document.querySelector('#project-filters');
   const mobileFilter = document.querySelector('#project-filter-select');

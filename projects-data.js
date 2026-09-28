@@ -78,6 +78,7 @@ window.JUNRY_PROJECTS = Object.freeze([
   },
   {
     id: 'jimenez-real-estate-group',
+    visible: false,
     name: 'Jimenez Real Estate Group',
     sector: 'Real estate services',
     filters: ['real-estate'],
