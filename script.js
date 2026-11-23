@@ -39,16 +39,6 @@
   requestScrollEffects();
   addEventListener('scroll', requestScrollEffects, { passive: true });
 
-  const inPageLinks = [...document.querySelectorAll('a[href^="#"]:not([href="#"])')].filter(link => !link.closest('#site-navigation-root'));
-  inPageLinks.forEach(link => link.addEventListener('click', e => {
-    const target = document.querySelector(link.getAttribute('href'));
-    if (!target) return;
-    e.preventDefault();
-    target.setAttribute('tabindex', '-1');
-    target.focus({ preventScroll: true });
-    window.scrollTo({ top: target.offsetTop - 80, behavior: reduced.matches ? 'auto' : 'smooth' });
-  }));
-
   if (!coarse.matches) document.querySelectorAll('.project-media').forEach(media => {
     media.addEventListener('pointermove', e => {
       const r = media.getBoundingClientRect();

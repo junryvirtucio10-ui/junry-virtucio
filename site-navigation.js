@@ -45,6 +45,7 @@
   const menuButton = root.querySelector('.menu-toggle');
   const themeButton = root.querySelector('.theme-toggle');
   const mobileMenu = root.querySelector('#mobile-menu');
+  const caseDialog = document.querySelector('#case-dialog');
   const compactNav = matchMedia('(max-width: 1100px)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const stickyArchiveControls = document.querySelector('.archive-controls');
@@ -127,15 +128,131 @@
     }
   });
 
-  root.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(link => link.addEventListener('click', event => {
-    const target = document.querySelector(link.getAttribute('href'));
+  const clampScroll = top => Math.max(0, Math.min(top, document.documentElement.scrollHeight - innerHeight));
+  let anchorFrame = 0;
+  let wheelFrame = 0;
+  let wheelTarget = 0;
+  let wheelPosition = 0;
+  let previousWheelTime = 0;
+
+  const cancelWheelScroll = () => {
+    cancelAnimationFrame(wheelFrame);
+    wheelFrame = 0;
+  };
+  const cancelAnchorScroll = () => {
+    cancelAnimationFrame(anchorFrame);
+    anchorFrame = 0;
+  };
+
+  const cancelScroll = () => {
+    cancelAnchorScroll();
+    cancelWheelScroll();
+  };
+
+  document.addEventListener('click', event => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const link = event.target.closest('a[href^="#"]');
+    if (!link || link.hasAttribute('download') || (link.target && link.target !== '_self')) return;
+    const target = document.getElementById(link.hash.slice(1));
     if (!target) return;
-    event.preventDefault();
+
     if (mobileMenu.classList.contains('open')) setMenu(false, false);
-    target.setAttribute('tabindex', '-1');
+    cancelScroll();
+    if (reduced.matches) return;
+
+    if (link.hash !== location.hash) {
+      try {
+        history.pushState(history.state, '', link.hash);
+      } catch {
+        return;
+      }
+    }
+    event.preventDefault();
     target.focus({ preventScroll: true });
-    window.scrollTo({ top: target.offsetTop - 80, behavior: reduced.matches ? 'auto' : 'smooth' });
-  }));
+
+    const start = scrollY;
+    const margin = parseFloat(getComputedStyle(target).scrollMarginTop);
+    const destination = () => clampScroll(scrollY + target.getBoundingClientRect().top - margin);
+    const distance = Math.abs(destination() - start);
+    if (distance < 1) return;
+
+    const duration = Math.min(760, 420 + distance * .22);
+    let elapsed = 0;
+    let previousFrame;
+    const step = now => {
+      // Keep a dropped frame from skipping the end of the easing curve.
+      elapsed += Math.min(now - (previousFrame ?? now), 34);
+      previousFrame = now;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = (1 - Math.cos(Math.PI * progress)) / 2;
+      const top = start + (destination() - start) * eased;
+      window.scrollTo({ top, behavior: 'instant' });
+      anchorFrame = progress < 1 ? requestAnimationFrame(step) : 0;
+    };
+    anchorFrame = requestAnimationFrame(step);
+  });
+
+  const stepWheel = now => {
+    const elapsed = previousWheelTime ? Math.min(now - previousWheelTime, 34) : 16;
+    previousWheelTime = now;
+    wheelTarget = clampScroll(wheelTarget);
+    wheelPosition += (wheelTarget - wheelPosition) * (1 - Math.exp(-elapsed / 58));
+    const settled = Math.abs(wheelTarget - wheelPosition) < .75;
+    window.scrollTo({ top: settled ? wheelTarget : wheelPosition, behavior: 'instant' });
+    wheelFrame = settled ? 0 : requestAnimationFrame(stepWheel);
+  };
+
+  addEventListener('wheel', event => {
+    cancelAnchorScroll();
+    const { deltaMode, deltaX, deltaY, deltaZ } = event;
+    // WheelEvent has no device type. Leave small or fractional pixel deltas to native scrolling.
+    const fineDelta = deltaMode === WheelEvent.DOM_DELTA_PIXEL && (Math.abs(deltaY) < 40 || !Number.isInteger(deltaY));
+    if (reduced.matches || event.defaultPrevented || !event.cancelable || !deltaY || deltaX || deltaZ || fineDelta ||
+        event.ctrlKey || event.metaKey || event.shiftKey || event.altKey ||
+        caseDialog?.open || mobileMenu.classList.contains('open') ||
+        event.target.closest?.('input, select, textarea, [contenteditable]')) {
+      cancelWheelScroll();
+      return;
+    }
+
+    const insideScrollable = event.composedPath().some(element =>
+      element instanceof Element && element !== document.body && element !== document.scrollingElement &&
+      element.scrollHeight > element.clientHeight && /^(auto|scroll|overlay)$/.test(getComputedStyle(element).overflowY)
+    );
+    if (insideScrollable) {
+      cancelWheelScroll();
+      return;
+    }
+
+    const units = deltaMode === WheelEvent.DOM_DELTA_LINE
+      ? parseFloat(getComputedStyle(document.body).lineHeight)
+      : deltaMode === WheelEvent.DOM_DELTA_PAGE ? innerHeight : 1;
+    const delta = deltaY * units;
+    const position = clampScroll(scrollY);
+    // Discard outstanding travel when the wheel changes direction.
+    const continuing = wheelFrame && Math.sign(wheelTarget - position) === Math.sign(delta);
+    wheelTarget = clampScroll((continuing ? wheelTarget : position) + delta);
+    if (wheelTarget === position) {
+      cancelWheelScroll();
+      return;
+    }
+
+    event.preventDefault();
+    if (!wheelFrame) {
+      wheelPosition = position;
+      previousWheelTime = 0;
+      wheelFrame = requestAnimationFrame(stepWheel);
+    }
+  }, { passive: false });
+
+  addEventListener('touchstart', cancelScroll, { passive: true });
+  addEventListener('popstate', cancelScroll);
+  reduced.addEventListener('change', cancelScroll);
+  document.addEventListener('keydown', event => {
+    if ((anchorFrame || wheelFrame) && ['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) {
+      cancelScroll();
+    }
+  });
 
   addEventListener('scroll', () => {
     const y = scrollY;
